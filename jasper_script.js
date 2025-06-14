@@ -8,8 +8,17 @@ const jasper = {
     health: {hitPoints:10, majorThreshold:10, severeThreshold:10},
     experiences: {exp1:"", exp2:"", exp3:"", exp4:"", exp5:"",},
     weapons: {proficiency:5, mainHand:"", offHand:"",},
-    domainEffects: {},
-    classFeatures: {},
+    domainEffects: [
+
+    ],
+    classFeatures: [
+        { // Wizard Hope Feature
+            cardName:"Not This Time",
+            cardDesc: "<strong>Spend 3 Hope</strong> to force an adversary within Far range to reroll an attack or damage roll.",
+            cardBttn: "<button class='hope-button'>3 Hope</button>",
+            active:true,
+        },
+    ],
     equipment: {
         gold: {handfulls:0,bags:0},
         items: {
@@ -26,7 +35,11 @@ const jasper = {
 const damageButtons = document.querySelectorAll('.damage-roll');
 const dualityButtons = document.querySelectorAll('.duality-roll');
 const reactionButtons = document.querySelectorAll('.reaction-roll');
+const damageRoll = document.querySelector('.damage-output');
+const abilityRoll = document.querySelector('.ability-output');
+const reactionRoll = document.querySelector('.reaction-output');
 
+//  Event Listeners for all buttons, targetting the individual one pressed
 for (button of damageButtons) {
     button.addEventListener('click', (clicked) => targetButton(clicked));
 }
@@ -66,7 +79,7 @@ function rollDice(diceInput) { // diceInput = content of dice button press
     for (let i=0; i<amountOfDice ;i++) {
         let currentDie = Math.floor(Math.random()*dieSize +1);
         rollTotal += currentDie;
-        console.log(`this die: ${currentDie}, total roll: ${rollTotal}`)
+        damageRoll.textContent = `You rolled: ${rollTotal}`;
     };
     rollTotal += rollBonus;
     console.log(rollTotal)
@@ -75,25 +88,24 @@ function rollDice(diceInput) { // diceInput = content of dice button press
 
 // duality dice roller, rolls 2 standard d12's and adds the bonus passed to function
 function dualityDice(rollBonus) { 
-    console.log(rollBonus)
     // diceInput = content of dice button press
     const hopeValue = Math.floor(Math.random()*12+1);
     const fearValue = Math.floor(Math.random()*12+1);
     const addedValue = Number(rollBonus);
     const rollTotal = hopeValue + fearValue + addedValue;
-    console.log(`Hope: ${hopeValue}, Fear: ${fearValue}, Bonus: ${addedValue} , Total: ${rollTotal}`)
+   
     if (hopeValue > fearValue) {
         // rolled with Hope
         let result =  {rollAmount:rollTotal,rollType:"Hope"};   
-        console.log(`You rolled a ${result.rollAmount} with ${result.rollType}`)     
+        abilityRoll.textContent = `You rolled a ${result.rollAmount} with ${result.rollType}`;  
     } else if (fearValue > hopeValue) {
         // rolled with Fear
         let result =  {rollAmount:rollTotal,rollType:"Fear"};
-        console.log(`You rolled a ${result.rollAmount} with ${result.rollType}`)
+        abilityRoll.textContent = `You rolled a ${result.rollAmount} with ${result.rollType}`;
     } else if (hopeValue === fearValue) {
         //critical success
         let result = {rollAmount:rollTotal,rollType:"Critical Success!"};
-        console.log(`You rolled a ${result.rollAmount} with ${result.rollType}`)
+        abilityRoll.textContent = `You rolled a ${result.rollAmount} with ${result.rollType}`;
     };
 };
 
@@ -122,3 +134,7 @@ function targetButton(clicked) {
     // ability rolls "Rolled:  x with Hope/Fear"
     // reaction rolls "Rolled:  x"
     // damage rolls "Total Damage: x"
+
+// Add button to all damage rolls to "roll to hit" as well.
+
+// Add toggle for advantage, disadvantage
