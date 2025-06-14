@@ -22,53 +22,66 @@ const jasper = {
         tempCondition:false
     },
 }
-// store items and domain cards in individual objects, functions should work with
-    // any given character to generate a character sheet
+// Add class="damage-roll" to all weapon and spell attacks in html files
+const damageButtons = document.querySelectorAll('.damage-roll');
+const dualityButtons = document.querySelectorAll('.duality-roll');
+const reactionButtons = document.querySelectorAll('.reaction-roll');
 
-// use localStorage to store Hope, Stress, Armor, Hitpoints
-    // store anything that may disappear session to session
+for (button of damageButtons) {
+    button.addEventListener('click', (clicked) => targetButton(clicked));
+}
+for (button of dualityButtons) {
+    // get value of the button and pass variable to below function
+    button.addEventListener('click', (clicked) => targetButton(clicked))
+}
+for (button of reactionButtons) {
+    // button.addEventListener('click' (clicked) => )
+}
 
-// function to make card active / inactive on checkbox click
-    // active cards added to array.
-    // if array.length >= 5, alert("You have the maximum amount 
-        // of domain cards selected. Please deselect a domain card first.")
-    // display active cards
+// button dice roller, rolls dice based on string input of button pressed. 
+function getRollInfo(diceInput) {
+    console.log(`Input Value:  ${diceInput}`)
+    // return array of CLEANED string
+    if (diceInput.length == 2) {
+        //duality dice, remove '+' or '-'
+        let plusFilter=diceInput.replace('+','');
+        let cleanedString=plusFilter.replace('-','');
+        console.log(`Cleaned String Value:  {cleanedString}`)
+        return dualityDice(cleanedString);
+    } else  {
+        console.log('you are here')
+        let filter1 = diceInput.replace("d", " "); // remove 'd' from string
+        let rollSpecifics = filter1.replace("+", " "); // remove '+' from string
+        let rollArray = rollSpecifics.split(" "); // split string at spaces into array
+        return rollDice(rollArray);
+    }  
+}
 
-// dice roller uses the string display of the button, using JS to split the string
-    // split string by spaces, array should look like [2,"d",8,"+",3]
-    // array[0] - number of dice to roll
-    // array[2] - number of faces for the die to roll
-    // array[4] - bonus number added to the roll total
-
-    // duality dice require specific tracking of each die for Hope / Fear mechs
-
-
-// button dice roller, rolls dice based on string input of button pressed.    
 function rollDice(diceInput) { // diceInput = content of dice button press
-    let filter1 = diceInput.replace("d", " "); // remove 'd' from string
-    let rollSpecifics = filter1.replace("+", " "); // remove '+' from string
-    let rollArray = rollSpecifics.split(" "); // split string at spaces into array
-    
-    const amountOfDice = Number(rollArray[0]);
-    const dieSize = Number(rollArray[1]);
-    const rollBonus = Number(rollArray[2]);
+    console.log(diceInput)
+    const amountOfDice = Number(diceInput[0]);
+    const dieSize = Number(diceInput[1]);
+    const rollBonus = Number(diceInput[2]);
     let rollTotal = 0;
-    for (let i=0; i< amountOfDice ;i++) {
+    for (let i=0; i<amountOfDice ;i++) {
         let currentDie = Math.floor(Math.random()*dieSize +1);
         rollTotal += currentDie;
-        console.log(currentDie, rollTotal)
+        console.log(`this die: ${currentDie}, total roll: ${rollTotal}`)
     };
     rollTotal += rollBonus;
-    console.log(`You rolled ${diceInput} and got a total of: ${rollTotal}`)
+    console.log(rollTotal)
+    console.log(`You rolled ${diceInput} and got a total of: ${Number(rollTotal)}`)
 }
 
 // duality dice roller, rolls 2 standard d12's and adds the bonus passed to function
 function dualityDice(rollBonus) { 
+    console.log(rollBonus)
     // diceInput = content of dice button press
     const hopeValue = Math.floor(Math.random()*12+1);
     const fearValue = Math.floor(Math.random()*12+1);
-    const rollTotal = hopeValue + fearValue + rollBonus;
-    console.log(`Hope: ${hopeValue}, Fear: ${fearValue}, Bonus: ${rollBonus} , Total: ${rollTotal}`)
+    const addedValue = Number(rollBonus);
+    const rollTotal = hopeValue + fearValue + addedValue;
+    console.log(`Hope: ${hopeValue}, Fear: ${fearValue}, Bonus: ${addedValue} , Total: ${rollTotal}`)
     if (hopeValue > fearValue) {
         // rolled with Hope
         let result =  {rollAmount:rollTotal,rollType:"Hope"};   
@@ -82,9 +95,30 @@ function dualityDice(rollBonus) {
         let result = {rollAmount:rollTotal,rollType:"Critical Success!"};
         console.log(`You rolled a ${result.rollAmount} with ${result.rollType}`)
     };
-    
 };
 
-// delete after all functions pass tests
-rollDice("3d10+4");
-console.log(dualityDice(8));
+function targetButton(clicked) {
+    console.log('clicked!')
+    let clickedID= clicked.target.id;
+    let targeted = document.getElementById(clickedID)
+    console.log(targeted)
+    getRollInfo(targeted.textContent)
+
+}
+
+// store items and domain cards in individual objects, functions should work with
+    // any given character to generate a character sheet
+
+// use localStorage to store Hope, Stress, Armor, Hitpoints
+    // store anything that may disappear session to session
+
+// function to make card active / inactive on checkbox click
+    // active cards added to array.
+    // if array.length >= 5, alert("You have the maximum amount 
+        // of domain cards selected. Please deselect a domain card first.")
+    // display active cards
+
+// All dice results need to be updated to the dice output section.
+    // ability rolls "Rolled:  x with Hope/Fear"
+    // reaction rolls "Rolled:  x"
+    // damage rolls "Total Damage: x"
