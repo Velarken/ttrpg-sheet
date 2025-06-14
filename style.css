@@ -1,6 +1,89 @@
-:root {
+/* :root {} */
+
+body {
+    display:flex;
+    flex-direction: column;
+}
+a {
+    text-decoration: none;
+}
+.nav-container {
+    display:flex;
+    list-style:none;
+     width:100%;
+    justify-content: space-evenly;
+}
+.character-sheet {
+    display:flex;
+    flex-direction: column;
+    width:95vw;
+    align-items: center;
+}
+.combat-numbers {
+    display:flex;
+    width:100%;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.traits {
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width:100%;
+}
+.traits>div {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin:10px;
+}
+.title {
+    font-weight:700;
+}
+.player-economy {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:60%;
+    margin:10px;
+}
+.hp-stress {
+    display:flex;
+    flex-direction: column;
+    background-color:rgba(182, 140, 1, 0.418);
+    border:3px solid rgb(182,140,1);
+    border-radius: 8px;
+    text-align: center;
+    width:100%;
+}
+.experiences {
+    display:flex;
+    flex-direction:column;
 
 }
-body {
-
+.experience1,.experience2,.experience3,.experience4,.experience5 {
+    display:flex;
+    flex:1;
+    margin:5px 0px 5px 0px;
+}
+.attack-experience-hope {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.aeh-left, .aeh-right {
+    display:flex;
+    flex-direction: column;
+    
+    justify-content: space-evenly;
+    margin:10px;
+    width:50%;
+}
+.primary-weapon-info, .secondary-weapon-info {
+    display:flex;
+    align-items: center;
+    flex:1;
+    
 }
