@@ -3,6 +3,10 @@
 body {
     display:flex;
     flex-direction: column;
+    background-image: url("/images/background.jpg");
+    background-color:black;
+    background-size: cover;
+    align-items: center;
 }
 a {
     text-decoration: none;
@@ -22,17 +26,33 @@ a {
 .conditions {
     display:flex;
 }
+.character-auras {
+    display:flex;
+    background-color: white;
+    border:3px solid rgb(182, 140, 1);
+    border-radius: 8px;
+    padding:10px;
+}
 .combat-numbers {
     display:flex;
     width:100%;
     justify-content: space-evenly;
     text-align: center;
+    background-color: white;
+    border:3px solid rgb(182, 140, 1);
+    border-radius: 8px;
+    padding:10px;
+    margin:10px;
 }
 .traits {
     display:flex;
     align-items: center;
     justify-content: space-evenly;
     width:100%;
+    background-color: white;
+    border:3px solid rgb(182, 140, 1);
+    border-radius: 8px;
+    padding:10px;
 }
 .traits>div {
     display:flex;
@@ -40,6 +60,9 @@ a {
     justify-content: center;
     text-align: center;
     margin:10px;
+}
+.traits>div>div {
+    padding:0px 15px 15px 15px;
 }
 .title {
     font-weight:700;
@@ -54,16 +77,16 @@ a {
 .hp-stress {
     display:flex;
     flex-direction: column;
-    background-color:rgba(182, 140, 1, 0.418);
-    border:3px solid rgb(182,140,1);
+    background-color: white;
+    border:3px solid rgb(182, 140, 1);
     border-radius: 8px;
     text-align: center;
     width:100%;
+    padding:10px;
 }
 .experiences {
     display:flex;
     flex-direction:column;
-
 }
 .experience1,.experience2,.experience3,.experience4,.experience5 {
     display:flex;
@@ -76,17 +99,38 @@ a {
     align-items: center;
     justify-content: center;
 }
+.dice-output-container {
+    display:flex;
+    flex-direction:column;
+    background-color: white;
+    border:3px solid rgb(182, 140, 1);
+    border-radius: 8px;
+}
+.roll-list {
+    display:flex;
+}
+.roll-list>div {
+    text-align: center;
+    margin:10px;
+}
 .aeh-left, .aeh-right {
     display:flex;
     flex-direction: column;
-    
     justify-content: space-evenly;
     margin:10px;
+    padding:15px;
     width:50%;
+    background-color: white;
+    border:3px solid rgb(182, 140, 1);
+    border-radius: 8px;
 }
 .primary-weapon-info, .secondary-weapon-info {
     display:flex;
     align-items: center;
     flex:1;
-    
+}
+.effects-features {
+    background-color: white;
+    border:3px solid rgb(182, 140, 1);
+    border-radius: 8px;
 }
