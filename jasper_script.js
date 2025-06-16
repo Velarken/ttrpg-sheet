@@ -48,26 +48,7 @@ for (button of dualityButtons) {
     button.addEventListener('click', (clicked) => targetButton(clicked))
 }
 for (button of reactionButtons) {
-    // button.addEventListener('click' (clicked) => )
-}
-
-// button dice roller, rolls dice based on string input of button pressed. 
-function getRollInfo(diceInput) {
-    console.log(`Input Value:  ${diceInput}`)
-    // return array of CLEANED string
-    if (diceInput.length == 2) {
-        //duality dice, remove '+' or '-'
-        let plusFilter=diceInput.replace('+','');
-        let cleanedString=plusFilter.replace('-','');
-        console.log(`Cleaned String Value:  {cleanedString}`)
-        return dualityDice(cleanedString);
-    } else  {
-        console.log('you are here')
-        let filter1 = diceInput.replace("d", " "); // remove 'd' from string
-        let rollSpecifics = filter1.replace("+", " "); // remove '+' from string
-        let rollArray = rollSpecifics.split(" "); // split string at spaces into array
-        return rollDice(rollArray);
-    }  
+    button.addEventListener('click', (clicked) => targetButton2(clicked));
 }
 
 function rollDice(diceInput) { // diceInput = content of dice button press
@@ -97,24 +78,72 @@ function dualityDice(rollBonus) {
     if (hopeValue > fearValue) {
         // rolled with Hope
         let result =  {rollAmount:rollTotal,rollType:"Hope"};   
-        abilityRoll.textContent = `You rolled a ${result.rollAmount} with ${result.rollType}`;  
+        abilityRoll.textContent = `You rolled a ${result.rollAmount} with ${result.rollType}!`;  
     } else if (fearValue > hopeValue) {
         // rolled with Fear
         let result =  {rollAmount:rollTotal,rollType:"Fear"};
-        abilityRoll.textContent = `You rolled a ${result.rollAmount} with ${result.rollType}`;
+        abilityRoll.textContent = `You rolled a ${result.rollAmount} with ${result.rollType}!`;
     } else if (hopeValue === fearValue) {
         //critical success
         let result = {rollAmount:rollTotal,rollType:"Critical Success!"};
-        abilityRoll.textContent = `You rolled a ${result.rollAmount} with ${result.rollType}`;
+        abilityRoll.textContent = `You rolled a ${result.rollAmount} with ${result.rollType}!`;
     };
 };
+
+function reactionDice(rollBonus) {
+    const bonusNumber = Number(rollBonus);
+    let currentTotal = 0;
+    for (let i=2;i>0;i--) {
+        let result = Math.floor(Math.random()*12+1);
+        currentTotal+=result;
+    }
+    const rollTotal = currentTotal + bonusNumber
+    reactionRoll.textContent = `You rolled a ${rollTotal}.`;
+}
+
+// button dice roller, rolls dice based on string input of button pressed. 
+function getRollInfo(diceInput) {
+    console.log(`Input Value:  ${diceInput}`)
+    // return array of CLEANED string
+    if (diceInput.length == 2) {
+        // Add a code block that checks for "+" or "-" and do the math for each
+            //respectively. Currently all buttons add bonus regardless of add/subtract
+
+        //duality dice, remove '+' or '-'
+        let plusFilter=diceInput.replace('+','');
+        let cleanedString=plusFilter.replace('-','');
+        console.log(`Cleaned String Value:  ${cleanedString}`)
+        return dualityDice(cleanedString);
+    } else  {
+        console.log('you are here')
+        let filter1 = diceInput.replace("d", " "); // remove 'd' from string
+        let rollSpecifics = filter1.replace("+", " "); // remove '+' from string
+        let rollArray = rollSpecifics.split(" "); // split string at spaces into array
+        return rollDice(rollArray);
+    }  
+}
 
 function targetButton(clicked) {
     console.log('clicked!')
     let clickedID= clicked.target.id;
     let targeted = document.getElementById(clickedID)
+    
+    // if (targeted.className)
+
     console.log(targeted)
     getRollInfo(targeted.textContent)
+
+}
+
+function targetButton2(clicked) {
+    console.log('clicked!')
+    let clickedID= clicked.target.id;
+    let targeted = document.getElementById(clickedID)
+    
+    // if (targeted.className)
+
+    console.log(targeted)
+    reactionDice(targeted.textContent)
 
 }
 
