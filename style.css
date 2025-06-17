@@ -1,23 +1,20 @@
-:root {
-    --background-color:rgb(0,0,0);
-    @font-face {
+@font-face {
     font-family: 'Antone';
     src: url('/fonts/AntoneDEMO-Clean.woff2') format('woff2'),
         url('/fonts/AntoneDEMO-Clean.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-    }
-    @font-face {
-        font-family: 'Antone';
-        src: url('/fonts/AntoneDEMO-Clean.woff2') format('woff2'),
-            url('/fonts/AntoneDEMO-Clean.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-    }
 }
 
+:root {
+    --background-color:rgb(240, 236, 213);
+    --gold:rgb(182, 140, 1);
+    --crimson:rgb(112, 0, 0);
+    --navy:rgb(0, 11, 105);
+    --shadow:rgb(83, 2, 129);
+}
+/* Element Selectors */
 body {
     display:flex;
     flex-direction: column;
@@ -27,82 +24,217 @@ body {
     align-items: center;
     font-family: 'Antone';
 }
+button {
+    font-family: 'Antone';
+}
 a {
+    color:var(--crimson);
     text-decoration: none;
     font-family: 'Antone';
+}
+a:visited {
+    color:var(--crimson);
 }
 .nav-container {
     display:flex;
     list-style:none;
-    width:100%;
+    min-width:50vw;
     justify-content: space-evenly;
+    background-color: var(--background-color);
+    border:5px solid var(--crimson);
+    border-radius: 12px;
+    padding:10px;
 }
+/* Selectors for individual page colors */
+.jasper-outer {
+    border:5px solid var(--crimson);
+    border-radius: 12px;
+}
+.jasper-inner {
+    border:3px solid var(--gold);
+    border-radius: 8px;
+}
+.jasper-text {
+    color:var(--crimson);
+}
+.luna-outer {
+    border:5px solid var(--navy);
+    border-radius: 12px;
+}
+.luna-inner {
+    border:3px solid var(--navy);
+    border-radius: 8px;
+}
+.luna-text {
+    color:var(--navy);
+}
+.ravy-outer {
+    border:5px solid var(--shadow);
+    border-radius: 12px;
+}
+.ravy-inner {
+    border:3px solid var(--shadow);
+    border-radius: 8px;
+}
+.ravy-text {
+    color:var(--shadow);
+}
+
 .character-sheet {
     display:flex;
     flex-direction: column;
     width:95vw;
     align-items: center;
 }
-.conditions {
-    display:flex;
+.title {
+    text-align: center;
+    color:var(--crimson);
+    font-weight:700;
+}
+.title2 {
+    text-align: center;
+    color:white;
+    font-weight:700;
 }
 .character-auras {
     display:flex;
-    background-color: white;
-    border:3px solid rgb(182, 140, 1);
+    background-color: var(--background-color);
+    border:5px solid var(--crimson);
+    border-radius: 12px;
+    padding:10px;
+    margin:10px;
+    width:90vw;
+}
+.condition-container {
+    display:flex;
+    flex-direction: column;
+    border:3px solid var(--gold);
+    border-radius: 8px;
+    margin:10px;
+    padding:10px;
+    text-align: center;
+}
+.condition-container>div {
+    display:flex;
+    flex:1;
+}
+.condition-container>div>div {
+    flex:1;
+    text-align: center;
+}
+.roll-list,#roll-list {
+    flex:1;
+    align-items: center;
+    justify-content: center;
+}
+.dice-output-container {
+    display:flex;
+    flex-direction:column;
+    background-color: var(--background-color);
+    border:3px solid var(--gold);
+    border-radius: 8px;
+    padding:10px;
+}
+.conditions {
+    display:flex;
+}
+.resistance-container {
+    border:3px solid var(--gold);
     border-radius: 8px;
     padding:10px;
 }
 .combat-numbers {
     display:flex;
-    width:100%;
+    min-width:40vw;
     justify-content: space-evenly;
     text-align: center;
-    background-color: white;
-    border:3px solid rgb(182, 140, 1);
+    background-color: var(--background-color);
+    border:5px solid var(--crimson);
     border-radius: 8px;
     padding:10px;
     margin:10px;
 }
-.traits {
-    display:flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width:100%;
-    background-color: white;
-    border:3px solid rgb(182, 140, 1);
+.evasion,.armor,.armor-slots {
+    border:3px solid var(--gold);
     border-radius: 8px;
     padding:10px;
+    margin:10px;
 }
-.traits>div {
+.trait-container {
+    display:flex;
+    align-items: center;
+    width:100%;
+    border-radius: 12px;
+    margin:10px;
+}
+.trait {
     display:flex;
     flex-direction: column;
+    flex:1;
     justify-content: center;
     text-align: center;
     margin:10px;
+    padding:10px 5px 10px 5px;
+    background-color: var(--background-color);
+    border:5px solid var(--crimson);
+    border-radius: 8px;
+    height:100%;
 }
 .traits>div>div {
-    padding:0px 15px 15px 15px;
-}
-.title {
-    font-weight:700;
+    display:flex;
+    flex-direction:column;
+    padding:10px;
+    flex:1;
 }
 .player-economy {
     display:flex;
     flex-direction: column;
     align-items: center;
-    width:60%;
     margin:10px;
+    min-width:70%;
+    background-color: var(--background-color);
+    border:5px solid var(--crimson);
+    border-radius: 12px;
 }
 .hp-stress {
+    flex:1;
     display:flex;
     flex-direction: column;
-    background-color: white;
-    border:3px solid rgb(182, 140, 1);
-    border-radius: 8px;
     text-align: center;
-    width:100%;
+    border-radius: 8px;
+    max-width:50%;
     padding:10px;
+    margin:10px;
+    border:3px solid var(--gold);
+}
+.hp,.stress {
+    flex:1;
+    display:flex;
+    flex-direction: column;
+}
+.damage-thresholds {
+    flex:1;
+    display:flex;
+}
+.damage-thresholds * {
+    flex:1;
+    padding:5px;
+}
+.dmg-bar {
+    background-color:var(--crimson);
+    color:white;
+    text-align: center;
+    margin:-2px;
+    border-radius:8px;
+}
+.dmg-thresh {
+    border:3px outset var(--gold);
+    border-radius: 8px;
+    background-color: white;
+    text-align: center;
+    font-size:22px;
+    justify-content: center;
+    align-items: center;
 }
 .experiences {
     display:flex;
@@ -113,18 +245,14 @@ a {
     flex:1;
     margin:5px 0px 5px 0px;
 }
+.exp>div {
+    padding:10px;
+}
 .attack-experience-hope {
     display:flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-}
-.dice-output-container {
-    display:flex;
-    flex-direction:column;
-    background-color: white;
-    border:3px solid rgb(182, 140, 1);
-    border-radius: 8px;
 }
 .roll-list {
     display:flex;
@@ -134,23 +262,119 @@ a {
     margin:10px;
 }
 .aeh-left, .aeh-right {
+    flex:1;
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
     margin:10px;
     padding:15px;
     width:50%;
-    background-color: white;
-    border:3px solid rgb(182, 140, 1);
-    border-radius: 8px;
+    background-color: var(--background-color);
+    border:5px solid var(--crimson);
+    border-radius: 12px;
 }
 .primary-weapon-info, .secondary-weapon-info {
     display:flex;
     align-items: center;
     flex:1;
+    border:3px solid var(--gold);
+    border-radius: 8px;
+    padding:10px;
+}
+.primary-weapon-info>div, .secondary-weapon-info>div {
+    margin:10px;
+}
+.primary-weapon,.secondary-weapon {
+    display:flex;
+    flex-direction: column;
+}
+.primary-weapon>div,.secondary-weapon>div {
+    flex:1;
+    display:flex;
+    margin:10px;
+}
+.right-head {
+    display:flex;
+    flex-direction: column;
+    align-self: center;
+    margin-bottom:10px;
 }
 .effects-features {
-    background-color: white;
-    border:3px solid rgb(182, 140, 1);
+    display:flex;
+    flex-direction: row;
+    padding:10px;
+    background-color: var(--background-color);
+    border:5px solid var(--crimson);
     border-radius: 8px;
+    padding:10px;
+}
+.ef-left,.ef-right {
+    display:flex;
+    flex-direction: column;
+    flex:1;
+    margin:10px;
+    padding:10px;
+}
+.card-head {
+    display:flex;
+}
+.card-head>div {
+    flex:1;
+}
+.card-buttons {
+    display:flex;
+}
+.card-buttons>div {
+    flex:1;
+    text-align: right;
+    margin:10px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.domain-card {
+    border:3px solid var(--gold);
+    border-radius: 8px;
+    padding:10px;
+    margin:10px;
+}
+.class-hope-feature,.class-features,.multiclass-features,
+.subclass-features,.multi-subclass-features,.ancestry-features,
+.community-features {
+    border:3px solid var(--gold);
+    border-radius: 8px;
+    padding:10px;
+    margin:10px;
+}
+.extra-domain-cards {
+    display:flex;
+    flex-direction: row;
+    padding:10px;
+    margin:10px;
+    background-color: var(--background-color);
+    border:5px solid var(--crimson);
+    border-radius: 8px;
+    width:92vw;
+}
+.domain-effect {
+    background-color:var(--background-color);
+    border-radius: 8px;
+    padding:10px;
+}
+.codex {
+    background-image: url('/images/codex.jpg');
+}
+.splendor {
+    background-image:url('/images/splendor.jpg')
+}
+.valor {
+    background-image:url('/images/valor.jpg');
+}
+.sage {
+    background-image: url('/images/sage.jpg');
+}
+.bone {
+    background-image: url('/images/bone.jpg');
 }
