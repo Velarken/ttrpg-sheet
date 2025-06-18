@@ -6,16 +6,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body> 
-    <!--  -->
-    <div class="nav-container">
+<body class="jasper-bg"> 
+    <div class="nav-container jasper-outer">
         <li><a href="jasper.html">Jasper</a></li>
         <li><a href="luna.html">Luna</a></li>
         <li><a href="ravy.html">Ravy</a></li>
     </div>
     <div class="container">
         <div class="character-sheet">
-            <div class="character-auras">
+            <div class="character-auras jasper-outer">
                 <div class="dice-output-container">
                 <div class="title" id="roll-list">Roll History</div>
                 <div class="roll-list">
@@ -53,7 +52,7 @@
                     <!-- Populate with character object info -->
                 </div>
             </div>
-            <div class="combat-numbers">
+            <div class="combat-numbers jasper-outer">
                 <div class="evasion">
                     <div class="title">Evasion</div>
                     <div class="value">14</div>
@@ -75,7 +74,7 @@
                 </div>
             </div>
             <div class="trait-container">
-                <div class="trait" id="agility">
+                <div class="trait jasper-outer" id="agility">
                     <div class="title">Agility</div>
                     <div class="btn-container">
                         <h5>Active Roll:</h5>
@@ -86,7 +85,7 @@
                         <button class="reaction-roll" id="agility-reaction">+4</button>
                     </div>
                 </div>
-                <div class="trait" id="finesse">
+                <div class="trait jasper-outer" id="finesse">
                     <div class="title">Finesse</div>
                     <div class="btn-container">
                         <h5>Active Roll:</h5>
@@ -97,7 +96,7 @@
                         <button class="reaction-roll" id="finesse-reaction">+2</button>
                     </div>   
                 </div>
-                <div class="trait" id="presence">
+                <div class="trait jasper-outer" id="presence">
                     <div class="title">Presence</div>
                     <div class="btn-container">
                         <h5>Active Roll:</h5>
@@ -108,7 +107,7 @@
                         <button class="reaction-roll" id="presence-reaction">+0</button>
                     </div>
                 </div>
-                <div class="trait" id="instinct">
+                <div class="trait jasper-outer" id="instinct">
                     <div class="title">Instinct</div>
                     <div class="btn-container">
                         <h5>Active Roll:</h5>
@@ -119,7 +118,7 @@
                         <button class="reaction-roll" id="instinct-reaction">+3</button>
                     </div>
                 </div>
-                <div class="trait" id="strength">
+                <div class="trait jasper-outer" id="strength">
                     <div class="title">Strength</div>
                     <div class="btn-container">
                         <h5>Active Roll:</h5>
@@ -130,7 +129,7 @@
                         <button class="reaction-roll" id="strength-reaction">-1</button>
                     </div>
                 </div>
-                <div class="trait" id="knowledge">
+                <div class="trait jasper-outer" id="knowledge">
                     <div class="title">Knowledge</div>
                     <div class="btn-container">
                         <h5>Active Roll:</h5>
@@ -142,7 +141,7 @@
                     </div>
                 </div>
             </div>
-            <div class="player-economy">
+            <div class="player-economy jasper-outer">
                 <h3 class="title" id="hp-stress">Hit Points & Stress</h3>
                 <div class="damage-thresholds">
                     <div class="dmg-bar">Minor Damage</div>
@@ -184,7 +183,7 @@
                 </div>
             </div>
             <div class="attack-experience-hope">
-                <div class="aeh-left">
+                <div class="aeh-left jasper-outer">
                     <div class="left-head">
                         <div class="title">Active Weapons</div>
                         <div class="proficiency">Proficiency:  4</div>
@@ -195,6 +194,7 @@
                             <div class="weapon-name">Arcane Spell Blades</div>
                             <div class="weapon-trait">Knowledge</div>
                             <button class="weapon-damage damage-roll reaction" id="weapon1">4d10+9</button>
+                            <button class="duality-roll weapon-damage reaction">+5</button>
                         </div>
                     </div>
                     <div class="secondary-weapon">
@@ -203,10 +203,11 @@
                             <div class="weapon-name">Staff of the Relentless Storm</div>
                             <div class="weapon-trait">Knowledge</div>
                             <button class="weapon-damage damage-roll reaction" id="weapon2">4d6+9</button>
+                            <button class="duality-roll weapon-damage reaction">+5</button>
                         </div>
                     </div>
                 </div>
-                <div class="aeh-right">
+                <div class="aeh-right jasper-outer">
                     <div class="right-head">
                         <div class="title">Hope</div>
                         <div class="hope-ticks">
@@ -245,7 +246,7 @@
                     </div>
                 </div>
             </div>
-            <div class="effects-features">
+            <div class="effects-features  jasper-outer">
                 <div class="ef-left">
                     <h2 class="title">Domain Cards</h2>
                     <div class="domain-cards">
@@ -258,7 +259,8 @@
                             <div class="card-effects">
                                 <div class="domain-effect">
                                     <div class="card-title"><strong>Wild Flame</strong></div>
-                                    <div class="card-description">Make a Spellcast Roll against up to three adversaries within Melee range. Targets you succeed against take 2d6 magic damage and must mark a Stress as flames erupt from your hand.</div>
+                                    <div class="card-description">Make a Spellcast Roll against up to three adversaries within Melee range. 
+                                        Targets you succeed against take 2d6 magic damage and must mark a Stress as flames erupt from your hand.</div>
                                     <div class="card-buttons">
                                         <button class="duality-roll">+6</button>
                                         <button class="damage-roll">2d6</button>
@@ -271,7 +273,8 @@
                                 </div>
                                 <div class="domain-effect">
                                     <div class="card-title"><strong>Mysterious Mist</strong></div>
-                                    <div class="card-description">Make a Spellcast Roll (13) to cast a temporary thick fog that gathers in a stationary area within Very Close range. The fog heavily obscures this area and everything in it.</div>
+                                    <div class="card-description">Make a Spellcast Roll (13) to cast a temporary thick fog that gathers 
+                                        in a stationary area within Very Close range. The fog heavily obscures this area and everything in it.</div>
                                     <div class="card-buttons">
                                         <button class="duality-roll">+6</button>
                                         <div>Effect Active</div>
@@ -304,9 +307,9 @@ Once per long rest, when you spend this healing time learning something new abou
                             </div>
                             <div class="card-effects">
                                 <div class="domain-effect">
-                                    <div class="card-description">Make a Spellcast Roll (15) to magically empower your aura. On a success, spend 2 Hope to make your Presence equal to your Spellcast trait until your next long rest.
-
-While this spell is active, an adversary must mark a Stress when they target you with an attack.</div>
+                                    <div class="card-description">Make a Spellcast Roll (15) to magically empower your aura. On a success, 
+                                        spend 2 Hope to make your Presence equal to your Spellcast trait until your next long rest.
+                                        <br><br>While this spell is active, an adversary must mark a Stress when they target you with an attack.</div>
                                     <div class="card-buttons">
                                         <button class="damage-roll">+6</button>
                                         <div class="plr">
@@ -329,9 +332,11 @@ While this spell is active, an adversary must mark a Stress when they target you
                             </div>                            
                             <div class="card-effects">
                                 <div class="domain-effect">
-                                    <div class="card-description">Make a Spellcast Roll to unleash powerful rays of burning sunlight against all adversaries in front of you within Far range. On a success, spend any number of Hope and force that many targets you succeeded against to make a Reaction Roll (14).
-<br>
-Targets who succeed take 3d20+3 magic damage. Targets who fail take 4d20+5 magic damage and are temporarily Stunned. While Stunned, they can’t use reactions and can’t take any other actions until they clear this condition.</div>
+                                    <div class="card-description">Make a Spellcast Roll to unleash powerful rays of burning sunlight against all 
+                                        adversaries in front of you within Far range. On a success, spend any number of Hope and force that many 
+                                        targets you succeeded against to make a Reaction Roll (14).
+                                    <br>Targets who succeed take 3d20+3 magic damage. Targets who fail take 4d20+5 magic damage and are temporarily 
+                                    Stunned. While Stunned, they can’t use reactions and can’t take any other actions until they clear this condition.</div>
                                     <div class="card-buttons">
                                         <button class="duality-roll">+6</button>
                                         <button class="damage-roll">3d20+3</button>
@@ -347,10 +352,11 @@ Targets who succeed take 3d20+3 magic damage. Targets who fail take 4d20+5 magic
                             </div>
                             <div class="card-effects">
                                 <div class="domain-effect">
-                                    <div class="card-description">When 4 or more of the domain cards in your loadout are from the Splendor domain, gain the following benefits:
-
-<br> -  +3 bonus to your Severe damage threshold
-<br> -  Once per long rest, when incoming damage would require you to mark a number of Hit Points, you can choose to mark that much Stress or spend that much Hope instead.</div>
+                                    <div class="card-description">When 4 or more of the domain cards in your loadout are from the Splendor domain, 
+                                        gain the following benefits:
+                                    <br> -  +3 bonus to your Severe damage threshold
+                                    <br> -  Once per long rest, when incoming damage would require you to mark a number of Hit Points, you can 
+                                    choose to mark that much Stress or spend that much Hope instead.</div>
                                     <card-buttons></card-buttons>
                                 </div>
                             </div>
@@ -364,24 +370,34 @@ Targets who succeed take 3d20+3 magic damage. Targets who fail take 4d20+5 magic
                         <div class="class-hope-feature">
                             <div class="title">Wizard Hope</div>
                             <div class="card-desc">
-                                <div class="card-feature"><strong>Not This Time: Spend 3 Hope</strong> to force an adversary within Far range to reroll an attack or damage roll.</div>
+                                <div class="card-feature"><strong>Not This Time: Spend 3 Hope</strong> to force an adversary 
+                                    within Far range to reroll an attack or damage roll.
+                                </div>
                                 <button class="addHope">3 Hope</button>
                             </div>
                         </div>
                         <div class="class-features">
                             <div class="title">Wizard Class Features</div>
                             <div class="card-desc">
-                                <div class="card-feature"><strong>Prestidigitation:</strong> You can perform harmless, subtle magical effects at will. For example, you can change an object’s color, create a smell, light a candle, cause a tiny object to float, illuminate a room, or repair a small object.</div>
+                                <div class="card-feature"><strong>Prestidigitation:</strong> You can perform harmless, subtle magical 
+                                    effects at will. For example, you can change an object’s color, create a smell, light a candle, 
+                                    cause a tiny object to float, illuminate a room, or repair a small object.</div>
                             </div>
                             <div class="card-desc">
-                                <div class="card-feature"><strong>Strange Patterns:</strong> Choose a number between 1 and 12. When you roll that number on a Duality Die, gain a Hope or clear a Stress. You can change this number when you take a long rest.</div>
+                                <div class="card-feature"><strong>Strange Patterns:</strong> Choose a number between 1 and 12. When you roll 
+                                    that number on a Duality Die, gain a Hope or clear a Stress. You can change this number when you take a 
+                                    long rest.</div>
                                 <div class="pattern-number">8</div> 
                             </div>
                         </div>
                         <div class="multiclass-features">
                             <div class="title">Seraph Class Features</div>
                             <div class="card-desc">
-                                <div class="card-feature"><strong>Aid of the Brass</strong>: At the beginning of each session, roll a number of d4s equal to your subclass’s Spellcast trait and place them on your character sheet in the space provided. These are your Prayer Dice. You can spend any number of Prayer Dice to aid yourself or an ally within Far range. You can use a spent die’s value to reduce incoming damage, add to a roll’s result after the roll is made, or gain Hope equal to the result. At the end of each session, clear all unspent Prayer Dice.</div>
+                                <div class="card-feature"><strong>Aid of the Brass</strong>: At the beginning of each session, roll a number 
+                                    of d4s equal to your subclass’s Spellcast trait and place them on your character sheet in the space 
+                                    provided. These are your Prayer Dice. You can spend any number of Prayer Dice to aid yourself or an ally 
+                                    within Far range. You can use a spent die’s value to reduce incoming damage, add to a roll’s result after 
+                                    the roll is made, or gain Hope equal to the result. <br><br>At the end of each session, clear all unspent Prayer Dice.</div>
                                 <div class="card-buttons">
                                     <button class="roll-feature-dice">5d4+0</button>
                                     <!-- Using JS, add fields for each rolled die-->
@@ -389,11 +405,13 @@ Targets who succeed take 3d20+3 magic damage. Targets who fail take 4d20+5 magic
                             </div>
                         </div>
                         <div class="subclass-features">
-                            <div class="title">Wizard Subclass Features</div>
+                            <div class="title">School of War Features</div>
                             <div class="card-feature-container">
                                 <div class="card-title"><strong>Battlemage</strong></div>
                                 <div class="card-desc">
-                                    <div class="card-feature"> You’ve focused your studies on becoming an unconquerable force on the battlefield. Gain an additional Hit Point slot.</div>
+                                    <div class="card-feature"> You’ve focused your studies on becoming an unconquerable force on the battlefield. 
+                                        Gain an additional Hit Point slot.
+                                    </div>
                                     <div class="card-buttons"></div>
                                 </div>
                             </div>
@@ -412,10 +430,11 @@ Targets who succeed take 3d20+3 magic damage. Targets who fail take 4d20+5 magic
                             <div class="card-feature-container">
                                 <div class="card-title"><strong>Wings of Light</strong></div>
                                 <div class="card-desc">
-                                    <div class="card-feature">You can fly. While flying, you can do the following:
-
-<br>-   Mark a Stress to pick up and carry another willing creature approximately your size or smaller.
-<br>-   Spend a Hope to deal an extra 1d8 damage on a successful attack.</div>
+                                    <div class="card-feature">
+                                    You can fly. While flying, you can do the following:
+                                    <br>-   Mark a Stress to pick up and carry another willing creature approximately your size or smaller.
+                                    <br>-   Spend a Hope to deal an extra 1d8 damage on a successful attack.
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -424,7 +443,10 @@ Targets who succeed take 3d20+3 magic damage. Targets who fail take 4d20+5 magic
                             <div class="card-feature-container">
                                 <div class="card-title"><strong>Adaptability</strong></div>
                                 <div class="card-desc">
-                                    <div class="card-feature">When you fail a roll that utilized one of your Experiences, you can mark a Stress to reroll.</div>
+                                    <div class="card-feature">
+                                        When you fail a roll that utilized one of your Experiences, you can mark a 
+                                        Stress to reroll.
+                                    </div>
                                     <div class="card-buttons">
                                         <button>1 Stress</button>
                                     </div>
@@ -445,7 +467,9 @@ Targets who succeed take 3d20+3 magic damage. Targets who fail take 4d20+5 magic
                             <div class="card-feature-contianer">
                                 <div class="card-title"><strong>Well-read</strong></div>
                                 <div class="card-desc">
-                                    <div class="card-feature">You have advantage on rolls that involve the history, culture, or politics of a prominent person or place.</div>
+                                    <div class="card-feature">You have advantage on rolls that involve the history, culture, 
+                                        or politics of a prominent person or place.
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -472,12 +496,18 @@ Targets who succeed take 3d20+3 magic damage. Targets who fail take 4d20+5 magic
                                 </div>
                                 <div class="domain-effect">
                                     <div class="card-title"><strong>Parallela</strong></div>
-                                    <div class="card-description"><strong>Spend 2 Hope</strong> to cast this spell on yourself or an ally within Close range. The next time the target makes an attack, they can hit an additional target within range that their attack roll would succeed against. You can only hold this spell on one creature at a time.</div>
+                                    <div class="card-description"><strong>Spend 2 Hope</strong> to cast this spell on yourself or an ally 
+                                        within Close range. The next time the target makes an attack, they can hit an additional target within 
+                                        range that their attack roll would succeed against. You can only hold this spell on one creature at a time.
+                                    </div>
                                     <div class="card-buttons"></div>
                                 </div>
                                 <div class="domain-effect">
                                     <div class="card-title"><strong>Illusion</strong></div>
-                                    <div class="card-description">Make a Spellcast Roll (14). On a success, create a temporary visual illusion no larger than you within Close range that lasts for as long as you look at it. It holds up to scrutiny until an observer is within Melee range.</div>
+                                    <div class="card-description">Make a Spellcast Roll (14). On a success, create a temporary visual illusion 
+                                        no larger than you within Close range that lasts for as long as you look at it. It holds up to scrutiny 
+                                        until an observer is within Melee range.
+                                    </div>
                                     <div class="card-buttons">
                                         <button class="duality-roll">+6</button>
                                         <div>Effect Active</div>
@@ -494,7 +524,9 @@ Targets who succeed take 3d20+3 magic damage. Targets who fail take 4d20+5 magic
                                 <input type="checkbox" class="active-card">
                             </div>
                             <div class="card-effects">
-                                <div class="domain-effect">Once per rest, when you critically succeed on an attack, all allies within Very Close range can clear a Stress or gain a Hope.</div>
+                                <div class="domain-effect">Once per rest, when you critically succeed on an attack, all allies within Very Close 
+                                    range can clear a Stress or gain a Hope.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -507,14 +539,20 @@ Targets who succeed take 3d20+3 magic damage. Targets who fail take 4d20+5 magic
                             <div class="card-effects">
                                 <div class="domain-effect">
                                     <div class="card-title"><strong>Mystic Tether</strong></div>
-                                    <div class="card-description">Make a Spellcast Roll against a target within Far range. On a success, they’re temporarily Restrained and must mark a Stress. If you target a flying creature, this spell grounds and temporarily Restrains them.</div>
+                                    <div class="card-description">Make a Spellcast Roll against a target within Far range. On a success, they’re 
+                                        temporarily Restrained and must mark a Stress. If you target a flying creature, this spell grounds and temporarily 
+                                        Restrains them.
+                                    </div>
                                     <div class="card-buttons">
                                         <button class="duality-roll">+6</button>
                                     </div>
                                 </div>
                                 <div class="domain-effect">
                                     <div class="card-title"><strong>Fireball</strong></div>
-                                    <div class="card-description"><strong>Spend 2 Hope</strong> to cast this spell on yourself or an ally within Close range. The next time the target makes an attack, they can hit an additional target within range that their attack roll would succeed against. You can only hold this spell on one creature at a time.</div>
+                                    <div class="card-description"><strong>Spend 2 Hope</strong> to cast this spell on yourself or an ally within 
+                                        Close range. The next time the target makes an attack, they can hit an additional target within range that their 
+                                        attack roll would succeed against. You can only hold this spell on one creature at a time.
+                                    </div>
                                     <div class="card-buttons"></div>
                                 </div>
                             </div>
@@ -526,7 +564,10 @@ Targets who succeed take 3d20+3 magic damage. Targets who fail take 4d20+5 magic
                             </div>
                             <div class="card-effects">
                                 <div class="domain-effect">
-                                    <div class="card-description">Once per rest, when you succeed on an attack against an adversary, you can clear 3 Stress or a Hit Point. On a success with Hope, you also clear 3 Stress or a Hit Point on an ally within Close range of you.</div>
+                                    <div class="card-description">Once per rest, when you succeed on an attack against an adversary, you can clear 
+                                        3 Stress or a Hit Point. On a success with Hope, you also clear 3 Stress or a Hit Point on an ally within 
+                                        Close range of you.
+                                    </div>
                                     <div class="card-buttons">
                                         <div>Per short rest:</div>
                                         <input type="checkbox" class="active-ability">
@@ -541,9 +582,11 @@ Targets who succeed take 3d20+3 magic damage. Targets who fail take 4d20+5 magic
                             </div>
                             <div class="card-effects">
                                 <div class="domain-effect">
-                                    <div class="card-description"><strong>Spend a Hope</strong> to shape a section of natural material you’re touching (such as stone, ice, or wood) to suit your purpose. The area of the material can be no larger than you. For example, you can form a rudimentary tool or create a door.
-
-You can only affect the material within Close range of where you’re touching it.</div>
+                                    <div class="card-description"><strong>Spend a Hope</strong> to shape a section of natural material you’re touching 
+                                        (such as stone, ice, or wood) to suit your purpose. The area of the material can be no larger than you. For 
+                                        example, you can form a rudimentary tool or create a door.
+                                        <br><br>You can only affect the material within Close range of where you’re touching it.
+                                    </div>
                                     <div class="card-buttons">
                                         <div>Per short rest:</div>
                                         <input type="checkbox" class="active-ability">
@@ -561,7 +604,11 @@ You can only affect the material within Close range of where you’re touching i
                             <div class="card-effects">
                                 <div class="domain-effect">
                                     <div class="card-title"><strong>Timejammer</strong></div>
-                                    <div class="card-description">Make a Spellcast Roll (18). On a success, time temporarily slows to a halt for everyone within Far range except for you. It resumes the next time you make an action roll that targets another creature.</div>
+                                    <div class="card-description">
+                                        Make a Spellcast Roll (18). On a success, time temporarily slows to a halt 
+                                        for everyone within Far range except for you. It resumes the next time you make an action roll that 
+                                        targets another creature.
+                                    </div>
                                     <div class="card-buttons">
                                         <button class="duality-roll">+6</button>
                                         <div>Time Stopped:</div>
