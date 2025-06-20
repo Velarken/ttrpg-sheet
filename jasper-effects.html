@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="jasper-bg">
+    <div class="nav-container jasper-outer">
+        <li><a href="jasper.html">Jasper</a></li>
+        <li><a href="luna.html">Luna</a></li>
+        <li><a href="ravy.html">Ravy</a></li>
+    </div>
+    <div class="sub-nav jasper-outer">
+        <li><a href="jasper-equip.html">Weapons & Items</a></li>
+        <li><a href="jasper-effects.html">Domain Cards</a></li>
+    </div>
+    <div class="container">
+        <div class="dice-output-container jasper-outer">
+            <div class="title" id="roll-list">Roll History</div>
+            <div class="roll-list">
+                <div class="last-ability-roll">
+                    <div class="subtitle"><strong>Your Last Duality Dice Roll</strong></div>
+                    <div class="ability-output">No roll yet!</div>
+                </div> 
+                <div class="last-reaction-roll">
+                    <div class="subtitle"><strong>Your Last Reaction Roll</strong></div>
+                    <div class="reaction-output">No roll yet!</div>
+                </div>
+                <div class="last-damage-roll">
+                    <div class="subtitle"><strong>Your Last Damage Roll </strong></div>
+                    <div class="damage-output">No roll yet!</div>
+                </div>
+            </div>
+        </div>
+    <div class="effects-features">
+        <div class="ef-left">
+            <h2 class="title">Domain Cards</h2>
+            <div class="domain-cards">
+                <div id="domain-card1" class="domain-card codex" >
+                    <div class="card-head">
+                        <div class="title2">Book of Tyfar</div>
+                        <input type="checkbox" class="active-card">
+                    </div>                            
+                    <div class="card-effects">
+                        <div class="domain-effect">
+                            <div class="card-title"><strong>Wild Flame</strong></div>
+                            <div class="card-description">
+                                Make a Spellcast Roll against up to three 
+                                adversaries within Melee range. 
+                                Targets you succeed against take 2d6 magic damage and must mark a Stress
+                                 as flames erupt from your hand.
+                                </div>
+                            <div class="card-buttons">
+                                <button class="duality-roll" id="fire-hit">+6</button>
+                                <button class="damage-roll" id="fire-dmg">2d6</button>
+                            </div>
+                        </div>
+                        <div class="domain-effect">
+                            <div class="card-title"><strong>Magic Hand</strong></div>
+                            <div class="card-description">
+                                You conjure a magical hand with the same size and strength
+                                 as your own within Far range.
+                                </div>
+                            <div class="card-buttons"></div>
+                        </div>
+                        <div class="domain-effect">
+                            <div class="card-title"><strong>Mysterious Mist</strong></div>
+                            <div class="card-description">
+                                Make a Spellcast Roll (13) to cast a temporary thick fog that gathers 
+                                in a stationary area within Very Close range. The fog heavily obscures
+                                 this area and everything in it.
+                                </div>
+                                    <div class="card-buttons">
+                                        <button class="duality-roll">+6</button>
+                                        <div>Effect Active</div>
+                                        <input type="checkbox" class="active-effect">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="domain-card2" class="domain-card splendor" >
+                            <div class="card-head">
+                                <div class="title2">Mending Touch</div>
+                                <input type="checkbox" class="active-card">
+                            </div>
+                            <div class="card-effects">
+                                <div class="domain-effect">
+                                    <div class="card-description">You lay your hands upon a creature and channel healing magic to close their wounds. When you can take a few minutes to focus on the target you’re helping, you can <strong>spend 2 Hope</strong> to clear a Hit Point or a Stress on them.
+
+Once per long rest, when you spend this healing time learning something new about them or revealing something about yourself, you can clear 2 Hit Points or 2 Stress on them instead.</div>
+                                    <div class="card-buttons">
+                                        <div>Per long rest:</div>
+                                        <input type="checkbox" class="active-effect">
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        <div id="domain-card3" class="domain-card splendor" >
+                            <div class="card-head">
+                                <div class="title2">Overwhelming Aura</div>
+                                <input type="checkbox" class="active-card">
+                            </div>
+                            <div class="card-effects">
+                                <div class="domain-effect">
+                                    <div class="card-description">Make a Spellcast Roll (15) to magically empower your aura. On a success, 
+                                        spend 2 Hope to make your Presence equal to your Spellcast trait until your next long rest.
+                                        <br><br>While this spell is active, an adversary must mark a Stress when they target you with an attack.</div>
+                                    <div class="card-buttons">
+                                        <button class="damage-roll">+6</button>
+                                        <div class="plr">
+                                            <div>Active:</div>
+                                            <input type="checkbox" class="active-effect">
+                                        </div>
+                                        
+                                        <div class="plr">
+                                            <div>Per long rest:</div>
+                                            <input type="checkbox" class="active-effect">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="domain-card4" class="domain-card splendor" >
+                            <div class="card-head">
+                                <div class="title2">Stunning Sunlight</div>
+                                <input type="checkbox" class="active-card">
+                            </div>                            
+                            <div class="card-effects">
+                                <div class="domain-effect">
+                                    <div class="card-description">Make a Spellcast Roll to unleash powerful rays of burning sunlight against all 
+                                        adversaries in front of you within Far range. On a success, spend any number of Hope and force that many 
+                                        targets you succeeded against to make a Reaction Roll (14).
+                                    <br>Targets who succeed take 3d20+3 magic damage. Targets who fail take 4d20+5 magic damage and are temporarily 
+                                    Stunned. While Stunned, they can’t use reactions and can’t take any other actions until they clear this condition.</div>
+                                    <div class="card-buttons">
+                                        <button class="duality-roll">+6</button>
+                                        <button class="damage-roll">3d20+3</button>
+                                        <button class="damage-roll">4d20+5</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="domain-card5" class="domain-card splendor" >
+                            <div class="card-head">
+                                <div class="title2">Splendor Touched</div>
+                                <input type="checkbox" class="active-card">
+                            </div>
+                            <div class="card-effects">
+                                <div class="domain-effect">
+                                    <div class="card-description">When 4 or more of the domain cards in your loadout are from the Splendor domain, 
+                                        gain the following benefits:
+                                    <br> -  +3 bonus to your Severe damage threshold
+                                    <br> -  Once per long rest, when incoming damage would require you to mark a number of Hit Points, you can 
+                                    choose to mark that much Stress or spend that much Hope instead.</div>
+                                    <card-buttons></card-buttons>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="swap-card">Swap Domain Loadout</button>
+                    </div>
+                </div>
+                <div class="ef-right">
+                    <h2 class="title">Features & Effects</h2>
+                    <div class="features">
+                        <div class="class-hope-feature">
+                            <div class="title">Wizard Hope</div>
+                            <div class="card-desc">
+                                <div class="card-feature"><strong>Not This Time: Spend 3 Hope</strong> to force an adversary 
+                                    within Far range to reroll an attack or damage roll.
+                                </div>
+                                <button class="addHope">3 Hope</button>
+                            </div>
+                        </div>
+                        <div class="class-features">
+                            <div class="title">Wizard Class Features</div>
+                            <div class="card-desc">
+                                <div class="card-feature"><strong>Prestidigitation:</strong> You can perform harmless, subtle magical 
+                                    effects at will. For example, you can change an object’s color, create a smell, light a candle, 
+                                    cause a tiny object to float, illuminate a room, or repair a small object.</div>
+                            </div>
+                            <div class="card-desc">
+                                <div class="card-feature"><strong>Strange Patterns:</strong> Choose a number between 1 and 12. When you roll 
+                                    that number on a Duality Die, gain a Hope or clear a Stress. You can change this number when you take a 
+                                    long rest.</div>
+                                <div class="pattern-number">8</div> 
+                            </div>
+                        </div>
+                        <div class="multiclass-features">
+                            <div class="title">Seraph Class Features</div>
+                            <div class="card-desc">
+                                <div class="card-feature"><strong>Aid of the Brass</strong>: At the beginning of each session, roll a number 
+                                    of d4s equal to your subclass’s Spellcast trait and place them on your character sheet in the space 
+                                    provided. These are your Prayer Dice. You can spend any number of Prayer Dice to aid yourself or an ally 
+                                    within Far range. You can use a spent die’s value to reduce incoming damage, add to a roll’s result after 
+                                    the roll is made, or gain Hope equal to the result. <br><br>At the end of each session, clear all unspent Prayer Dice.</div>
+                                <div class="card-buttons">
+                                    <button class="roll-feature-dice">5d4+0</button>
+                                    <!-- Using JS, add fields for each rolled die-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subclass-features">
+                            <div class="title">School of War Features</div>
+                            <div class="card-feature-container">
+                                <div class="card-title"><strong>Battlemage</strong></div>
+                                <div class="card-desc">
+                                    <div class="card-feature"> You’ve focused your studies on becoming an unconquerable force on the battlefield. 
+                                        Gain an additional Hit Point slot.
+                                    </div>
+                                    <div class="card-buttons"></div>
+                                </div>
+                            </div>
+                                <div class="card-feature-container">
+                                <div class="card-title"><strong>Face Your Fear</strong></div>
+                                <div class="card-desc">
+                                    <div class="card-feature">When you succeed with Fear on an attack roll, you deal an extra 1d10 magic damage.</div>
+                                    <div class="card-buttons">
+                                        <button class="damage-roll">1d10+0</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="multi-subclass-features">
+                            <div class="title">Seraph Subclass Features</div>
+                            <div class="card-feature-container">
+                                <div class="card-title"><strong>Wings of Light</strong></div>
+                                <div class="card-desc">
+                                    <div class="card-feature">
+                                    You can fly. While flying, you can do the following:
+                                    <br>-   Mark a Stress to pick up and carry another willing creature approximately your size or smaller.
+                                    <br>-   Spend a Hope to deal an extra 1d8 damage on a successful attack.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ancestry-features">
+                            <div class="title">Half-Elf Ancestry</div>
+                            <div class="card-feature-container">
+                                <div class="card-title"><strong>Adaptability</strong></div>
+                                <div class="card-desc">
+                                    <div class="card-feature">
+                                        When you fail a roll that utilized one of your Experiences, you can mark a 
+                                        Stress to reroll.
+                                    </div>
+                                    <div class="card-buttons">
+                                        <button>1 Stress</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-feature-contianer">
+                                <div class="card-title"><strong>Quick Reactions</strong></div>
+                                <div class="card-desc">
+                                    <div class="card-feature">Mark a Stress to gain advantage on a reaction roll.</div>
+                                    <div class="card-buttons">
+                                        <button>1 Stress</button>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="community-features">
+                            <div class="title">Loreborne Community Feature</div>
+                            <div class="card-feature-contianer">
+                                <div class="card-title"><strong>Well-read</strong></div>
+                                <div class="card-desc">
+                                    <div class="card-feature">You have advantage on rolls that involve the history, culture, 
+                                        or politics of a prominent person or place.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div class="extra-domain-cards">
+                <div class="ef-left">
+                    <h2 class="title">Unequipped Domain Cards</h2>
+                    <div class="domain-cards">
+                        <div id="domain-card6" class="domain-card codex" >
+                            <div class="card-head">
+                                <div class="title2">Book of Sitil</div>
+                                <input type="checkbox" class="active-card">
+                            </div>                            
+                            <div class="card-effects">
+                                <div class="domain-effect">
+                                    <div class="card-title"><strong>Adjust Appearance</strong></div>
+                                    <div class="card-description">You magically shift your appearance and clothing to avoid recognition.</div>
+                                    <div class="card-buttons">
+                                        <div>Effect Active</div>
+                                        <input type="checkbox" class="active-effect">
+                                    </div>
+                                </div>
+                                <div class="domain-effect">
+                                    <div class="card-title"><strong>Parallela</strong></div>
+                                    <div class="card-description"><strong>Spend 2 Hope</strong> to cast this spell on yourself or an ally 
+                                        within Close range. The next time the target makes an attack, they can hit an additional target within 
+                                        range that their attack roll would succeed against. You can only hold this spell on one creature at a time.
+                                    </div>
+                                    <div class="card-buttons"></div>
+                                </div>
+                                <div class="domain-effect">
+                                    <div class="card-title"><strong>Illusion</strong></div>
+                                    <div class="card-description">Make a Spellcast Roll (14). On a success, create a temporary visual illusion 
+                                        no larger than you within Close range that lasts for as long as you look at it. It holds up to scrutiny 
+                                        until an observer is within Melee range.
+                                    </div>
+                                    <div class="card-buttons">
+                                        <button class="duality-roll">+6</button>
+                                        <div>Effect Active</div>
+                                        <input type="checkbox" class="active-effect">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="domain-cards">
+                        <div id="domain-card7" class="domain-card valor">
+                            <div class="card-head">
+                                <div class="title2">Critical Inspiration</div>
+                                <input type="checkbox" class="active-card">
+                            </div>
+                            <div class="card-effects">
+                                <div class="domain-effect">Once per rest, when you critically succeed on an attack, all allies within Very Close 
+                                    range can clear a Stress or gain a Hope.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="domain-cards">
+                        <div id="domain-card8" class="domain-card codex" >
+                            <div class="card-head">
+                                <div class="title2">Book of Norai</div>
+                                <input type="checkbox" class="active-card">
+                            </div>                            
+                            <div class="card-effects">
+                                <div class="domain-effect">
+                                    <div class="card-title"><strong>Mystic Tether</strong></div>
+                                    <div class="card-description">Make a Spellcast Roll against a target within Far range. On a success, they’re 
+                                        temporarily Restrained and must mark a Stress. If you target a flying creature, this spell grounds and temporarily 
+                                        Restrains them.
+                                    </div>
+                                    <div class="card-buttons">
+                                        <button class="duality-roll">+6</button>
+                                    </div>
+                                </div>
+                                <div class="domain-effect">
+                                    <div class="card-title"><strong>Fireball</strong></div>
+                                    <div class="card-description"><strong>Spend 2 Hope</strong> to cast this spell on yourself or an ally within 
+                                        Close range. The next time the target makes an attack, they can hit an additional target within range that their 
+                                        attack roll would succeed against. You can only hold this spell on one creature at a time.
+                                    </div>
+                                    <div class="card-buttons"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="domain-card9" class="domain-card splendor">
+                            <div class="card-head">
+                                <div class="title2">Second Wind</div>
+                                <input type="checkbox" class="active-card">
+                            </div>
+                            <div class="card-effects">
+                                <div class="domain-effect">
+                                    <div class="card-description">Once per rest, when you succeed on an attack against an adversary, you can clear 
+                                        3 Stress or a Hit Point. On a success with Hope, you also clear 3 Stress or a Hit Point on an ally within 
+                                        Close range of you.
+                                    </div>
+                                    <div class="card-buttons">
+                                        <div>Per short rest:</div>
+                                        <input type="checkbox" class="active-ability">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="domain-card10" class="domain-card splendor">
+                            <div class="card-head">
+                                <div class="title2">Shape Material</div>
+                                <input type="checkbox" class="active-card">
+                            </div>
+                            <div class="card-effects">
+                                <div class="domain-effect">
+                                    <div class="card-description"><strong>Spend a Hope</strong> to shape a section of natural material you’re touching 
+                                        (such as stone, ice, or wood) to suit your purpose. The area of the material can be no larger than you. For 
+                                        example, you can form a rudimentary tool or create a door.
+                                        <br><br>You can only affect the material within Close range of where you’re touching it.
+                                    </div>
+                                    <div class="card-buttons">
+                                        <div>Per short rest:</div>
+                                        <input type="checkbox" class="active-ability">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                            </div>
+                    <div class="domain-cards">
+                        <div id="domain-card11" class="domain-card codex" >
+                            <div class="card-head">
+                                <div class="title2">Book of Yarrow</div>
+                                <input type="checkbox" class="active-card">
+                            </div>                            
+                            <div class="card-effects">
+                                <div class="domain-effect">
+                                    <div class="card-title"><strong>Timejammer</strong></div>
+                                    <div class="card-description">
+                                        Make a Spellcast Roll (18). On a success, time temporarily slows to a halt 
+                                        for everyone within Far range except for you. It resumes the next time you make an action roll that 
+                                        targets another creature.
+                                    </div>
+                                    <div class="card-buttons">
+                                        <button class="duality-roll">+6</button>
+                                        <div>Time Stopped:</div>
+                                        <input type="checkbox" class="active-ability">
+                                    </div>
+                                </div>
+                                <div class="domain-effect">
+                                    <div class="card-title"><strong>Magic Immunity</strong></div>
+                                    <div class="card-description"><strong>Spend 5 Hope</strong> to become immune to magic damage until your next rest.</div>
+                                    <div class="card-buttons">
+                                        <div>Magic Immunity:</div>
+                                        <input type="checkbox" class="active-ability">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <script src="jasper_script.js"></script>
+</body>
+</html>

@@ -57,11 +57,13 @@ function rollDice(diceInput) { // diceInput = content of dice button press
     const dieSize = Number(diceInput[1]);
     const rollBonus = Number(diceInput[2]);
     let rollTotal = 0;
+    // could add ability to view each die per roll by adding current die to array then displaying each item
     for (let i=0; i<amountOfDice ;i++) {
         let currentDie = Math.floor(Math.random()*dieSize +1);
         rollTotal += currentDie;
-        damageRoll.textContent = `You rolled: ${rollTotal}`;
+        console.log(currentDie);
     };
+    damageRoll.textContent = `You rolled: ${rollTotal}`;
     rollTotal += rollBonus;
     console.log(rollTotal)
     console.log(`You rolled ${diceInput} and got a total of: ${Number(rollTotal)}`)

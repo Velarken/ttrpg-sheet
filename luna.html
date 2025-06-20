@@ -14,6 +14,11 @@
         <li><a href="ravy.html">Ravy</a></li>
     </div>
     <div class="container">
+        <div class="sub-nav luna-outer">
+            <li><a href="">Equipment</a></li>
+            <li><a href="">Domain Cards</a></li>
+            <li><a href="">Owlbearto</a></li>
+        </div>
         <div class="character-sheet">
             <div class="character-auras luna-outer">
                 <div class="dice-output-container">
@@ -422,62 +427,83 @@
             
             </div>
 
-            <!-- <div class="extra-domain-cards">
+            <div class="extra-domain-cards">
                 <div class="ef-left">
                     <h2 class="title">Unequipped Domain Cards</h2>
                     <div class="domain-cards">
-                        <div id="domain-card6" class="domain-card codex" >
+                        <div id="domain-card6" class="domain-card sage" >
                             <div class="card-head">
-                                <div class="title2">Book of Sitil</div>
+                                <div class="title2">Death Grip</div>
                                 <input type="checkbox" class="active-card">
                             </div>                            
                             <div class="card-effects">
-                                <div class="domain-effect">
-                                    <div class="card-title"><strong>Adjust Appearance</strong></div>
-                                    <div class="card-description">You magically shift your appearance and clothing to avoid recognition.</div>
+                                <div class="domain-effect">  
+                                    <div class="card-description">
+                                        Make a Spellcast Roll against a target within Close range and 
+                                        choose one of the following options:
+                                        <br><br>-   pull the target into Melee range or pull yourself into Melee range of them.
+                                        <br>-   You constrict the target and force them to mark 2 Stress.
+                                        <br>-   All adversaries between you and the target must succeed on a Reaction Roll (13) or be hit by vines, taking 3d6+2 physical damage.
+                                        <br><br>On a success, vines reach out from your hands, causing the chosen effect and temporarily Restraining the target.
+                                    </div>
                                     <div class="card-buttons">
-                                        <div>Effect Active</div>
+                                        <button class="duality-roll" id="death-hit">+6</button>
+                                        <button class="damage-roll" id="death-dmg">3d6+2</button>
+                                        <div>Enemy Restrained</div>
                                         <input type="checkbox" class="active-effect">
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="domain-cards">
+                        <div id="domain-card7" class="domain-card sage">
+                            <div class="card-head">
+                                <div class="title2">Conjure Swarm</div>
+                                <input type="checkbox" class="active-card">
+                            </div>
+                            <div class="card-effects">
                                 <div class="domain-effect">
-                                    <div class="card-title"><strong>Parallela</strong></div>
-                                    <div class="card-description"><strong>Spend 2 Hope</strong> to cast this spell on yourself or an ally within Close range. The next time the target makes an attack, they can hit an additional target within range that their attack roll would succeed against. You can only hold this spell on one creature at a time.</div>
+                                    <div class="card-title"><strong>Tekaira Armored Beetles</strong></div>
+                                    <div class="card-description">
+                                        <strong>Mark a Stress</strong> to conjure armored beetles that encircle you.
+                                         When you next take damage, reduce the severity by one threshold. 
+                                         You can spend a Hope to keep the beetles conjured after taking damage.
+                                    </div>
                                     <div class="card-buttons"></div>
                                 </div>
                                 <div class="domain-effect">
-                                    <div class="card-title"><strong>Illusion</strong></div>
-                                    <div class="card-description">Make a Spellcast Roll (14). On a success, create a temporary visual illusion no larger than you within Close range that lasts for as long as you look at it. It holds up to scrutiny until an observer is within Melee range.</div>
+                                    <div class="card-title"><strong>Fire Flies</strong></div>
+                                    <div class="card-description">
+                                        Make a Spellcast Roll against all adversaries within Close range. 
+                                        Spend a Hope to deal 2d8+3 magic damage to targets you succeeded against.
+                                    </div>
                                     <div class="card-buttons">
-                                        <button class="duality-roll">+6</button>
-                                        <div>Effect Active</div>
-                                        <input type="checkbox" class="active-effect">
+                                        <button class="duality-roll" id="flies-hit">+6</button>
+                                        <button class="damage-roll" id-="flies-dmg">2d8+3</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="domain-cards">
-                        <div id="domain-card7" class="domain-card valor">
+                        <div id="domain-card8" class="domain-card bone" >
                             <div class="card-head">
-                                <div class="title2">Critical Inspiration</div>
-                                <input type="checkbox" class="active-card">
-                            </div>
-                            <div class="card-effects">
-                                <div class="domain-effect">Once per rest, when you critically succeed on an attack, all allies within Very Close range can clear a Stress or gain a Hope.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="domain-cards">
-                        <div id="domain-card8" class="domain-card codex" >
-                            <div class="card-head">
-                                <div class="title2">Book of Norai</div>
+                                <div class="title2">Know Thy Enemy</div>
                                 <input type="checkbox" class="active-card">
                             </div>                            
                             <div class="card-effects">
                                 <div class="domain-effect">
-                                    <div class="card-title"><strong>Mystic Tether</strong></div>
-                                    <div class="card-description">Make a Spellcast Roll against a target within Far range. On a success, they’re temporarily Restrained and must mark a Stress. If you target a flying creature, this spell grounds and temporarily Restrains them.</div>
+                                    <div class="card-description">
+                                        When observing a creature, you can make an Instinct Roll against 
+                                        them. On a success, spend a Hope and ask the GM for one set of 
+                                        information about the target from the following options:
+                                        Their unmarked Hit Points and Stress.
+                                        <br><br>-   Their Difficulty and damage thresholds.
+                                        <br>-   Their tactics and standard attack damage dice.
+                                        <br>-   Their features and Experiences.
+                                        <br><br>Additionally on a success, you can mark a Stress to remove a Fear from the GM’s Fear Pool.
+                                    </div>
                                     <div class="card-buttons">
                                         <button class="duality-roll">+6</button>
                                     </div>
@@ -550,7 +576,7 @@ You can only affect the material within Close range of where you’re touching i
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
     <script src="jasper_script.js"></script>

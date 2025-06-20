@@ -485,126 +485,125 @@
                 <div class="ef-left">
                     <h2 class="title">Unequipped Domain Cards</h2>
                     <div class="domain-cards">
-                        <div id="domain-card6" class="domain-card codex" >
+                        <div id="domain-card6" class="domain-card midnight" >
                             <div class="card-head">
-                                <div class="title2">Book of Sitil</div>
+                                <div class="title2">Midnight Spirit</div>
                                 <input type="checkbox" class="active-card">
                             </div>                            
                             <div class="card-effects">
                                 <div class="domain-effect">
-                                    <div class="card-title"><strong>Adjust Appearance</strong></div>
-                                    <div class="card-description">You magically shift your appearance and clothing to avoid recognition.</div>
-                                    <div class="card-buttons">
-                                        <div>Effect Active</div>
-                                        <input type="checkbox" class="active-effect">
+                                    <div class="card-description">
+                                        <strong>Spend a Hope</strong> to summon a humanoid-sized spirit 
+                                        that can move or carry things for you until your next rest.
+                                        <br><br>You can also send it to attack an adversary. When you do, 
+                                        make a Spellcast Roll against a target within Very Far range. 
+                                        On a success, the spirit moves into Melee range with that target. 
+                                        Roll a number of d6s equal to your Spellcast trait and deal that 
+                                        much magic damage to the target. <em>The spirit then dissipates.</em> 
+                                        You can only have one spirit at a time.
                                     </div>
-                                </div>
-                                <div class="domain-effect">
-                                    <div class="card-title"><strong>Parallela</strong></div>
-                                    <div class="card-description"><strong>Spend 2 Hope</strong> to cast this spell on yourself or an ally within Close range. The next time the target makes an attack, they can hit an additional target within range that their attack roll would succeed against. You can only hold this spell on one creature at a time.</div>
-                                    <div class="card-buttons"></div>
-                                </div>
-                                <div class="domain-effect">
-                                    <div class="card-title"><strong>Illusion</strong></div>
-                                    <div class="card-description">Make a Spellcast Roll (14). On a success, create a temporary visual illusion no larger than you within Close range that lasts for as long as you look at it. It holds up to scrutiny until an observer is within Melee range.</div>
                                     <div class="card-buttons">
-                                        <button class="duality-roll">+6</button>
-                                        <div>Effect Active</div>
+                                        <button class="duality-roll" id="spirit-hit">+5</button>
+                                        <button class="damage-roll" id="spirit-dmg">5d6+0</button>
+                                        <div>Spirit Active</div>
                                         <input type="checkbox" class="active-effect">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="domain-cards">
-                        <div id="domain-card7" class="domain-card valor">
-                            <div class="card-head">
-                                <div class="title2">Critical Inspiration</div>
-                                <input type="checkbox" class="active-card">
-                            </div>
-                            <div class="card-effects">
-                                <div class="domain-effect">Once per rest, when you critically succeed on an attack, all allies within Very Close range can clear a Stress or gain a Hope.</div>
+                    <div id="domain-card7" class="domain-card grace">
+                        <div class="card-head">
+                            <div class="title2">Master of the Craft</div>
+                            <input type="checkbox" class="active-card">
+                        </div>
+                        <div class="card-effects">
+                            <div class="domain-effect">
+                                Gain a permanent +2 bonus to two of your Experiences 
+                                or a permanent +3 bonus to one of your Experiences. 
+                                Then place this card in your vault permanently.
                             </div>
                         </div>
                     </div>
-                    <div class="domain-cards">
-                        <div id="domain-card8" class="domain-card codex" >
-                            <div class="card-head">
-                                <div class="title2">Book of Norai</div>
-                                <input type="checkbox" class="active-card">
-                            </div>                            
-                            <div class="card-effects">
-                                <div class="domain-effect">
-                                    <div class="card-title"><strong>Mystic Tether</strong></div>
-                                    <div class="card-description">Make a Spellcast Roll against a target within Far range. On a success, they’re temporarily Restrained and must mark a Stress. If you target a flying creature, this spell grounds and temporarily Restrains them.</div>
-                                    <div class="card-buttons">
-                                        <button class="duality-roll">+6</button>
-                                    </div>
+                    <div id="domain-card8" class="domain-card midnight" >
+                        <div class="card-head">
+                            <div class="title2">Chokehold</div>
+                            <input type="checkbox" class="active-card">
+                        </div>                            
+                        <div class="card-effects">
+                            <div class="domain-effect">
+                                <div class="card-description">
+                                    When you position yourself behind a creature who’s about
+                                     your size, you can mark a Stress to pull them into a chokehold,
+                                     making them temporarily Vulnerable.
+                                    <br><br>When a creature attacks a target who is Vulnerable in this way, 
+                                    they deal an extra 2d6 damage.
                                 </div>
-                                <div class="domain-effect">
-                                    <div class="card-title"><strong>Fireball</strong></div>
-                                    <div class="card-description"><strong>Spend 2 Hope</strong> to cast this spell on yourself or an ally within Close range. The next time the target makes an attack, they can hit an additional target within range that their attack roll would succeed against. You can only hold this spell on one creature at a time.</div>
-                                    <div class="card-buttons"></div>
+                                <div class="card-buttons">
+                                    <button class="duality-roll">+6</button>
                                 </div>
                             </div>
                         </div>
-                        <div id="domain-card9" class="domain-card splendor">
-                            <div class="card-head">
-                                <div class="title2">Second Wind</div>
-                                <input type="checkbox" class="active-card">
-                            </div>
-                            <div class="card-effects">
-                                <div class="domain-effect">
-                                    <div class="card-description">Once per rest, when you succeed on an attack against an adversary, you can clear 3 Stress or a Hit Point. On a success with Hope, you also clear 3 Stress or a Hit Point on an ally within Close range of you.</div>
-                                    <div class="card-buttons">
-                                        <div>Per short rest:</div>
-                                        <input type="checkbox" class="active-ability">
-                                    </div>
+                    </div>
+                    <div id="domain-card9" class="domain-card midnight">
+                        <div class="card-head">
+                            <div class="title2">Stealth Expertise</div>
+                            <input type="checkbox" class="active-card">
+                        </div>
+                        <div class="card-effects">
+                            <div class="domain-effect">
+                                <div class="card-description">
+                                    When you roll with Fear while attempting to move unnoticed through 
+                                    a dangerous area, you can mark a Stress to roll with Hope instead.
+                                    <br><br>If an ally within Close range is also attempting to move unnoticed 
+                                    and rolls with Fear, you can mark a Stress to change their result 
+                                    to a roll with Hope.
                                 </div>
                             </div>
                         </div>
-                        <div id="domain-card10" class="domain-card splendor">
-                            <div class="card-head">
-                                <div class="title2">Shape Material</div>
-                                <input type="checkbox" class="active-card">
-                            </div>
-                            <div class="card-effects">
-                                <div class="domain-effect">
-                                    <div class="card-description"><strong>Spend a Hope</strong> to shape a section of natural material you’re touching (such as stone, ice, or wood) to suit your purpose. The area of the material can be no larger than you. For example, you can form a rudimentary tool or create a door.
-
-You can only affect the material within Close range of where you’re touching it.</div>
-                                    <div class="card-buttons">
-                                        <div>Per short rest:</div>
-                                        <input type="checkbox" class="active-ability">
-                                    </div>
+                    </div>
+                    <div id="domain-card10" class="domain-card grace">
+                        <div class="card-head">
+                            <div class="title2">Through Your Eyes</div>
+                            <input type="checkbox" class="active-card">
+                        </div>
+                        <div class="card-effects">
+                            <div class="domain-effect">
+                                <div class="card-description">
+                                    Choose a target within Very Far range. You can see through their 
+                                    eyes and hear through their ears. You can transition between using 
+                                    your own senses or the target’s freely until you cast another spell 
+                                    or until your next rest.
+                                </div>
+                                <div class="card-buttons">
+                                    <div>Currently Snooping:</div>
+                                    <input type="checkbox" class="active-ability">
                                 </div>
                             </div>
                         </div>
-                                            </div>
-                    <div class="domain-cards">
-                        <div id="domain-card11" class="domain-card codex" >
-                            <div class="card-head">
-                                <div class="title2">Book of Yarrow</div>
-                                <input type="checkbox" class="active-card">
-                            </div>                            
-                            <div class="card-effects">
-                                <div class="domain-effect">
-                                    <div class="card-title"><strong>Timejammer</strong></div>
-                                    <div class="card-description">Make a Spellcast Roll (18). On a success, time temporarily slows to a halt for everyone within Far range except for you. It resumes the next time you make an action roll that targets another creature.</div>
-                                    <div class="card-buttons">
-                                        <button class="duality-roll">+6</button>
-                                        <div>Time Stopped:</div>
-                                        <input type="checkbox" class="active-ability">
-                                    </div>
+                    </div>
+                    <div id="domain-card11" class="domain-card midnight" >
+                        <div class="card-head">
+                            <div class="title2">Dark Whispers</div>
+                            <input type="checkbox" class="active-card">
+                        </div>                            
+                        <div class="card-effects">
+                            <div class="domain-effect">
+                                <div class="card-description">
+                                    You can speak into the mind of any person with whom you’ve made 
+                                    physical contact. Once you’ve opened a channel with them,  
+                                    they can speak back into your mind. Additionally, you can mark 
+                                    a Stress to make a Spellcast Roll against them. On a success, 
+                                    you can ask the GM one of the following questions and receive 
+                                    an answer:
+                                    <br><br>-   Where are they?
+                                    <br>-   What are they doing?
+                                    <br>-   What are they afraid of?
+                                    <br>-   What do they cherish most in the world?
                                 </div>
-                                <div class="domain-effect">
-                                    <div class="card-title"><strong>Magic Immunity</strong></div>
-                                    <div class="card-description"><strong>Spend 5 Hope</strong> to become immune to magic damage until your next rest.</div>
-                                    <div class="card-buttons">
-                                        <div>Magic Immunity:</div>
-                                        <input type="checkbox" class="active-ability">
-                                    </div>
-                                </div>
+                            <div class="card-buttons">
+                                <button class="duality-roll" id="whisper-roll">+5</button>
+                            </div>
                             </div>
                         </div>
                     </div>
