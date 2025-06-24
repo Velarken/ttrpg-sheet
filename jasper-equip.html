@@ -6,46 +6,51 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="jasper-bg">
-        <div class="nav-container jasper-outer">
+<body class="jasper-bg ">
+        <div class="nav-container section-header-j">
         <li><a href="jasper.html">Jasper</a></li>
         <li><a href="luna.html">Luna</a></li>
         <li><a href="ravy.html">Ravy</a></li>
     </div>
-    <div class="sub-nav jasper-outer">
+    <div class="sub-nav section-header-j">
         <li><a href="jasper-equip.html">Weapons & Items</a></li>
         <li><a href="jasper-effects.html">Domain Cards</a></li>
     </div>
-    <div class="container">
-        <div class="dice-output-container jasper-outer">
-            <div class="title" id="roll-list">Roll History</div>
-            <div class="roll-list">
-                <div class="last-ability-roll">
-                    <div class="subtitle"><strong>Your Last Duality Dice Roll</strong></div>
-                    <div class="ability-output">No roll yet!</div>
-                </div> 
-                <div class="last-reaction-roll">
-                    <div class="subtitle"><strong>Your Last Reaction Roll</strong></div>
-                    <div class="reaction-output">No roll yet!</div>
-                </div>
-                <div class="last-damage-roll">
-                    <div class="subtitle"><strong>Your Last Damage Roll </strong></div>
-                    <div class="damage-output">No roll yet!</div>
-                </div>
+    <div class="dice-output-container jasper-outer">
+        <div class="title" id="roll-list">Roll History</div>
+        <div class="roll-list">
+            <div class="last-ability-roll">
+                <div class="subtitle"><strong>Your Last Duality Dice Roll</strong></div>
+                <div class="ability-output">No roll yet!</div>
+            </div> 
+            <div class="last-reaction-roll">
+                <div class="subtitle"><strong>Your Last Reaction Roll</strong></div>
+                <div class="reaction-output">No roll yet!</div>
+            </div>
+            <div class="last-damage-roll">
+                <div class="subtitle"><strong>Your Last Damage Roll </strong></div>
+                <div class="damage-output">No roll yet!</div>
             </div>
         </div>
+    </div>
+    <div class="container">
         <div class="equip-container">
-            <div class="item" id="zsosas-timepiece">
-                <div class="title">Zsosa's Timepiece</div>
-                <div class="damage-buttons">
-                    <div>Roll to hit</div>
-                    <button class="duality-roll" id="zsosas-hit">+5</button>
-                    <div>Roll Damage</div>
-                    <button class="damage-roll" id="zsosas-dmg">4d10+9</button>
+            <div class="card-container zsosas" id="zsosas-timepiece">
+                <div class="card-header">Zsosa's Timepiece</div>
+                <div class="card-buttons">
+                    <div class="flex-column">
+                        <div>Roll to hit</div>
+                        <button class="duality-roll" id="zsosas-hit">+5</button>
+                    </div>
+                    <div class="flex-column">
+                        <div>Roll Damage</div>
+                        <button class="damage-roll" id="zsosas-dmg">4d10+9</button>
+                    </div>
                 </div>
                 <div class="zsosas-effects">
-                    <div class="card-effects">
-                        <div class="title2">Momentary Stasis</div>
+                    <div class="card-midheader">Zsosa's Timepiece Abilities</div>
+                    <div class="card-feature">
+                        <div class="card-subheader">Momentary Stasis</div>
                         <div class="card-description">
                             <strong>Spend 2 Hope</strong> Make a spellcasting role against a creature, the targeted
                             creature must make an Instinct roll. If the Instinct roll is lower than 
@@ -56,34 +61,33 @@
                             <button class="duality-roll" id="stasis-hit">+5</button>
                         </div>
                     </div>
-                    <div class="card-effects">
-                        <div class="title2">Temporal Awareness</div>
+                    <div class="card-feature">
+                        <div class="card-subheader">Temporal Awareness</div>
                         <div class="card-description">
                             <strong>Spend 1 Hope</strong>, start your spotlight phase immediately. If another
                             player is currently in the spotlight, describe how you work with them to take your turn.
                         </div>
                     </div>
-                    <div class="card-effects">
-                        <div class="title2">Flicker In Time</div>
+                    <div class="card-feature">
+                        <div class="card-subheader">Flicker In Time</div>
                         <div class="card-description">
                             <strong>Spend 2 Hope</strong> to immediately clear 1 stress from or give 1 Hope to up to 5 allies.
                         </div>
                     </div>
-                    
                 </div>
                 <div class="zsosas-blessings">
-                    <div class="card-effects">
-                        <div class="title2">Temporal Awareness</div>
+                    <div class="card-midheader">Zsosa's Timepiece Blessings</div>
+                    <div class="card-feature">
+                        <div class="card-subheader">Temporal Awareness</div>
                         <div class="card-description">
                             You can create a 15-foot-radius sphere of temporal distortion, centered on yourself, 
                             that allows you and any friendly creature that enters the space to peer into the past 
                             and comb through the events of that space, up to 24 hours ago. This effect lasts 10 
                             minutes, or until dismissed
-
                         </div>
                     </div>
-                    <div class="card-effects">
-                        <div class="title2">Timeless Body</div>
+                    <div class="card-feature">
+                        <div class="card-subheader">Timeless Body</div>
                         <div class="card-description">
                             Once fully empowered, for every 10 years that pass your body only ages 1
                             year. This effect ends if you no longer control the pocket watch.
@@ -91,10 +95,21 @@
                     </div>
                 </div>
             </div>
-            <div class="item" id="staff-of-storms">
-                <div class="title">Staff of the Relentless Storm</div>
-                <div class="staff-effects">
-                    <div class="title2">Thunderstrike</div>
+            <div class="card-container storm-staff" id="staff-of-storms">
+                <div class="card-header">Staff of the Relentless Storm</div>
+                <div class="card-buttons">
+                    <div class="flex-column">
+                        <div>Roll to Hit:</div>
+                        <button class="duality-roll" id="range-attack-hit">+5</button>
+                    </div>
+                    <div class="flex-column">
+                        <div>Roll Damage:</div>
+                        <button class="damage-roll" id="range-attack-dmg">4d8+5</button>
+                    </div>
+
+                </div>
+                <div class="card-feature">
+                    <div class="card-subheader">Thunderstrike</div>
                     <div class="card-description">
                         <strong>Once per short rest</strong>, slam the staff against the ground to create a 
                         deafening shock wave emanating from you. All adversaries must make an Instinct roll 
@@ -106,8 +121,8 @@
                         <input type="checkbox" class="ability-active">
                     </div>
                 </div>
-                <div class="staff-effects">
-                    <div class="title2">Call Lightning</div>
+                <div class="card-feature">
+                    <div class="card-subheader">Call Lightning</div>
                     <div class="card-description">
                         <strong>Spend 1 Hope</strong>. Conjure a beam of lightning in the direction you are 
                         facing that reaches Very Far range. Any adversary within this area must succeed an 
@@ -117,8 +132,8 @@
                         <button class="damage-roll" id="lightning-dmg">5d6+0</button>
                     </div>
                 </div>
-                <div class="staff-effects">
-                    <div class="title2">Unending Torrent</div>
+                <div class="card-feature">
+                    <div class="card-subheader">Unending Torrent</div>
                     <div class="card-description">
                         <strong>Spend 1 Hope</strong> to summon a powerful stream of water directed towards an 
                         enemy or enemies of your choosing in a line. Adversaries must make a Strength roll of 
@@ -132,44 +147,44 @@
                     </div>
                 </div>
             </div>
-            <div class="item" id="diadem-brilliance">
-                <div class="title">Diadem of Brilliance</div>
-                <div class="diadem-effects">
-                    <div class="title2">Untouched by Flame</div>
+            <div class="card-container" id="diadem-brilliance">
+                <div class="card-header">Diadem of Brilliance</div>
+                <div class="card-feature">
+                    <div class="card-subheader">Untouched by Flame</div>
                     <div class="card-description">
                         <strong>Spend 2 Hope</strong>, become immune to fire damage until the end of the
                         scene. Removing the diadem also removes this effect.
                     </div>
                 </div>
-                <div class="diadem-effects">
-                    <div class="title2">Dazzling Light</div>
+                <div class="card-feature">
+                    <div class="card-subheader">Dazzling Light</div>
                     <div class="card-description">
                         <strong>Spend 1 Hope</strong>, create a sphere of light that reaches to Far range until the end
                         of scene. While within this dome of light, you are unaffected by magical darkness.
                     </div>
                 </div>
-                <div class="diadem-effects">
-                    <div class="title2">Starfall</div>
+                <div class="card-feature">
+                    <div class="card-subheader">Starfall</div>
                     <div class="card-description">
                          Conjure spectral daggers made of starlight that circle your head. <strong>Spend 1 Hope</strong> to
                         deal 6d10+8 damage to a creature within Far range.
                     </div>
                     <div class="card-buttons">
-                        <button class="damage-roll">4d10+4</button>
+                        <button class="damage-roll" id="starfall-dmg">4d10+4</button>
                     </div>
                 </div>
-                <div class="diadem-effects">
-                    <div class="title2">Forceful Hold</div>
+                <div class="card-feature">
+                    <div class="card-subheader">Forceful Hold</div>
                     <div class="card-description">
                         <strong>Spend 2 Hope</strong>, create a force field around a creature that you can see until your
                         next spotlight, or until the GM spends 1 Fear to dispel the effect.
                     </div>
                 </div>
             </div>
-            <div class="item" id="dragon-scale-armor">
-                <div class="title">Dragon Scale Armor</div>
-                <div class="card-effects">
-                    <div class="title2">Predator to Pray</div>
+            <div class="card-container" id="dragon-scale-armor">
+                <div class="card-header">Dragon Scale Armor</div>
+                <div class="card-feature">
+                    <div class="card-subheader">Predator to Pray</div>
                     <div class="card-description">
                         <strong>Spend 1 Hope</strong>, you are able to magically discern the distance
                          and direction to the nearest blue dragon. You are able to multiple dragons 
@@ -177,6 +192,7 @@
                     </div>
                 </div>
             </div>
+            <div class="empty-space"></div>
         </div>
     </div>
     <script src="jasper_script.js"></script>

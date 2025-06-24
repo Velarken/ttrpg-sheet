@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="jasper-bg"> 
-    <div class="nav-container jasper-outer">
+    <div class="nav-container section-header-j">
         <li><a href="jasper.html">Jasper</a></li>
         <li><a href="luna.html">Luna</a></li>
         <li><a href="ravy.html">Ravy</a></li>
     </div>
-    <div class="sub-nav jasper-outer">
-        <li><a href="jasper-equip.html">Weapons & Items</a></li>
-        <li><a href="jasper-effects.html">Domain Cards</a></li>
+    <div class="sub-nav section-header-j">
+        <li><a href="jasper-equip.html" class="black-header">Weapons & Items</a></li>
+        <li><a href="jasper-effects.html" class="black-header">Domain Cards</a></li>
     </div>
     <div class="container">
         <div class="character-sheet">
@@ -36,46 +36,46 @@
                     </div>
                 </div>
             </div>
-            <div class="character-auras">
-                <div class="condition-container jasper-outer">
-                    <h4>Conditions</h4>
+            <div class="character-auras ">
+                <div class="condition-container section-header-j">
+                    <h4 class="card-subheader">Conditions</h4>
                     <div class="conditions">
-                        <div class="condition">Vulnerable</div>
+                        <div class="black-header">Vulnerable</div>
                         <input type="checkbox" id="vulnerable" class="vulnerable inactive">
                     </div>
                     <div class="conditions">
-                        <div class="condition">Restrained</div>
+                        <div class="black-header">Restrained</div>
                         <input type="checkbox" id="restrained" class="restrained inactive">
                     </div>
                     <div class="conditions">
-                        <div class="condition">Hidden</div>
+                        <div class="black-header">Hidden</div>
                         <input type="checkbox" id="hidden" class=" hidden inactive">
                     </div>
                 </div>
-                <div class="resistance-container jasper-outer">
-                    <h4>Resistances</h4>
+                <div class="resistance-container section-header-j">
+                    <h4 class="card-subheader">Resistances</h4>
                     <div class="resistances">
-                        <li>Lightning (Tsuna & Hiromi's Dragon Scale Armor)</li>
-                        <li>Cold (Reinor's Ring)</li>
-                        <li>Acid (Ozlow's Bracelet)</li>
+                        <li class="black-header">Lightning (Tsuna & Hiromi's Dragon Scale Armor)</li>
+                        <li class="black-header">Cold (Reinor's Ring)</li>
+                        <li class="black-header">Acid (Ozlow's Bracelet)</li>
                     </div>
-                    <h4>Immunities</h4>
+                    <h4 class="card-subheader">Immunities</h4>
                     <div class="immunities">
-                        <li>Magical Sleep (Fae Ancestry)</li>
+                        <li class="black-header">Magical Sleep (Fae Ancestry)</li>
                     </div>
                 </div>
             </div>
-            <div class="combat-numbers jasper-outer">
+            <div class="combat-numbers section-header-j">
                 <div class="evasion">
-                    <div class="title">Evasion</div>
-                    <div class="value">14</div>
+                    <div class="card-subheader">Evasion</div>
+                    <div class="black-header">14</div>
                 </div>
                 <div class="armor">
-                    <div class="title">Armor</div>
-                    <div class="value">6</div>
+                    <div class="card-subheader">Armor</div>
+                    <div class="black-header">6</div>
                 </div>
                 <div class="armor-slots">
-                    <div class="title">Armor Slots</div>
+                    <div class="card-subheader">Armor Slots</div>
                     <div class="armor-ticks">
                         <input type="checkbox" id="agility1" class="armor-check inactive">
                         <input type="checkbox" id="agility2" class="armor-check inactive">
@@ -87,69 +87,69 @@
                 </div>
             </div>
             <div class="trait-container">
-                <div class="trait jasper-outer" id="agility">
+                <div class="trait section-header-j" id="agility">
                     <div class="title">Agility</div>
                     <div class="btn-container">
-                        <h5>Active Roll:</h5>
+                        <h5 class="black-header">Active Roll:</h5>
                         <button class="duality-roll" id="agility-duality">+4</button>
                     </div>
                     <div class="btn-container">
-                        <h5>Reaction Roll:</h5>
+                        <h5 class="black-header">Reaction Roll:</h5>
                         <button class="reaction-roll" id="agility-reaction">+4</button>
                     </div>
                 </div>
-                <div class="trait jasper-outer" id="finesse">
+                <div class="trait section-header-j" id="finesse">
                     <div class="title">Finesse</div>
                     <div class="btn-container">
-                        <h5>Active Roll:</h5>
+                        <h5 class="black-header">Active Roll:</h5>
                         <button class="duality-roll" id="finesse-duality">+2</button>
                     </div>
                     <div class="btn-container">
-                        <h5>Reaction Roll:</h5>
+                        <h5 class="black-header">Reaction Roll:</h5>
                         <button class="reaction-roll" id="finesse-reaction">+2</button>
                     </div>   
                 </div>
-                <div class="trait jasper-outer" id="presence">
+                <div class="trait section-header-j" id="presence">
                     <div class="title">Presence</div>
                     <div class="btn-container">
-                        <h5>Active Roll:</h5>
+                        <h5 class="black-header">Active Roll:</h5>
                         <button class="duality-roll" id="presence-duality">+0</button>
                     </div>
                     <div class="btn-container">
-                        <h5>Reaction Roll:</h5>
+                        <h5 class="black-header">Reaction Roll:</h5>
                         <button class="reaction-roll" id="presence-reaction">+0</button>
                     </div>
                 </div>
-                <div class="trait jasper-outer" id="instinct">
+                <div class="trait section-header-j" id="instinct">
                     <div class="title">Instinct</div>
                     <div class="btn-container">
-                        <h5>Active Roll:</h5>
+                        <h5 class="black-header">Active Roll:</h5>
                         <button class="duality-roll" id="instinct-duality">+3</button>
                     </div>
                     <div class="btn-container">
-                        <h5>Reaction Roll:</h5>
+                        <h5 class="black-header">Reaction Roll:</h5>
                         <button class="reaction-roll" id="instinct-reaction">+3</button>
                     </div>
                 </div>
-                <div class="trait jasper-outer" id="strength">
+                <div class="trait section-header-j" id="strength">
                     <div class="title">Strength</div>
                     <div class="btn-container">
-                        <h5>Active Roll:</h5>
+                        <h5 class="black-header">Active Roll:</h5>
                         <button class="duality-roll" id="strength-duality">-1</button>
                     </div>
                     <div class="btn-container">
-                        <h5>Reaction Roll:</h5>
+                        <h5 class="black-header">Reaction Roll:</h5>
                         <button class="reaction-roll" id="strength-reaction">-1</button>
                     </div>
                 </div>
-                <div class="trait jasper-outer" id="knowledge">
+                <div class="trait section-header-j" id="knowledge">
                     <div class="title">Knowledge</div>
                     <div class="btn-container">
-                        <h5>Active Roll:</h5>
+                        <h5 class="black-header">Active Roll:</h5>
                         <button class="duality-roll" id="knowledge-duality">+5</button>
                     </div>
                     <div class="btn-container">
-                        <h5>Reaction Roll:</h5>
+                        <h5 class="black-header">Reaction Roll:</h5>
                         <button class="reaction-roll" id="knowledge-reaction">+5</button>
                     </div>
                 </div>

@@ -6,13 +6,12 @@
     font-style: normal;
     font-display: swap;
 }
-
 :root {
     --background-color:rgba(240, 236, 213, 0.767);
-    --background-opacity:rgba(240, 236, 213, 0.562);
+    --background-opacity:rgba(236, 236, 236, 0.85);
     --white:rgb(235, 235, 235);
     --gold:rgb(182, 140, 1);
-    --crimson:rgb(112, 0, 0);
+    --crimson:rgb(126, 1, 1);
     --navy:rgb(0, 11, 105);
     --shadow:rgb(83, 2, 129);
 }
@@ -31,65 +30,22 @@ button {
     padding:5px;
 }
 a {
-    color:var(--crimson);
+    color:var(--gold);
     text-decoration: none;
     font-family: 'Antone';
+    text-shadow:-1px -1px 0 #ffffff, 1px -1px 0 #7c7c7c, -1px 1px 0 #000000, 1px 1px 0 #000000;
+    letter-spacing: 0.15rem;
 }
 a:visited {
-    color:var(--crimson);
+    color:var(--gold);
+    font-family: 'Antone';
+    text-shadow:-1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #ffffff, 1px 1px 0 #000;
 }
-/* Selectors for individual page colors */
-.jasper-outer {
-    border:5px solid var(--crimson);
-    border-radius: 12px;
-}
-.jasper-inner {
-    border:3px solid var(--gold);
-    border-radius: 8px;
-}
-.jasper-text {
-    color:var(--crimson);
-}
-.jasper-bg {
-    background-image: url('/images/background-cropped.jpg');
-    background-color:black;
-    background-size: cover;
-}
-.luna-outer {
-    border:5px solid var(--navy);
-    border-radius: 12px;
-}
-.luna-inner {
-    border:3px solid var(--navy);
-    border-radius: 8px;
-}
-.luna-text {
-    color:var(--navy);
-}
-.luna-bg{
-    background-image: url('/images/luna-bg.jpg');
-    background-color:black;
-    background-size: cover;
-}
-.ravy-outer {
-    border:5px solid var(--shadow);
-    border-radius: 12px;
-}
-.ravy-inner {
-    border:3px solid var(--shadow);
-    border-radius: 8px;
-}
-.ravy-text {
-    color:var(--shadow);
-}
-.ravy-bg {
-    background-image: url('/images/ravy-bg.png');
-    background-size:cover;
-}
+/* All Pages */
 .nav-container {
     display:flex;
     list-style:none;
-    min-width:50vw;
+    min-width:60vw;
     justify-content: space-evenly;
     background-color: var(--background-opacity);
     padding:10px;
@@ -109,6 +65,109 @@ a:visited {
     margin-left:10px;
     margin-right:10px;
 }
+.main-header {
+    text-align: center;
+    color:white;
+    font-weight:700;
+    font-size:22px;
+}
+/* Selectors for individual page colors */
+.jasper-outer {
+    border:5px solid var(--crimson);
+    border-radius: 12px;
+}
+.jasper-inner {
+    border:3px solid var(--gold);
+    border-radius: 8px;
+}
+.jasper-text {
+    color:var(--crimson);
+}
+.luna-outer {
+    border:5px solid var(--navy);
+    border-radius: 12px;
+}
+.luna-inner {
+    border:3px solid var(--navy);
+    border-radius: 8px;
+}
+.luna-text {
+    color:var(--navy);
+}
+.ravy-outer {
+    border:5px solid var(--shadow);
+    border-radius: 12px;
+}
+.ravy-inner {
+    border:3px solid var(--shadow);
+    border-radius: 8px;
+}
+.ravy-text {
+    color:var(--shadow);
+}
+/* Selectors for image backgrounds */
+.jasper-bg {
+    background-image: url('/images/background-cropped.jpg');
+    background-color:black;
+    background-size: cover;
+}
+.luna-bg{
+    background-image: url('/images/luna-bg.jpg');
+    background-color:black;
+    background-size: cover;
+}
+.ravy-bg {
+    background-image: url('/images/ravy-bg.png');
+    background-size:cover;
+}
+/* Domains */
+.codex {
+    background-image: url('/images/codex.jpg');
+    background-size: cover;
+}
+.splendor {
+    background-image:url('/images/splendor.jpg');
+    background-size: cover;
+}
+.valor {
+    background-image:url('/images/valor.jpg');
+    background-size: cover;
+}
+.sage {
+    background-image: url('/images/sage.jpg');
+    background-size: cover;
+}
+.bone {
+    background-image: url('/images/bone.jpg');
+    background-size: cover;
+}
+.grace {
+    background-image: url('/images/grace.jpg');
+    background-size: cover;
+}
+.midnight {
+    background-image: url('/images/midnight.jpg');
+    background-size: cover;
+}
+.wizard {
+    background-image: url('/images/wizard.jpg');
+    background-size: cover;
+}
+.seraph {
+    background-image: url('/images/seraph.jpg');
+    background-size: cover;
+}
+/* Equipment */
+.zsosas {
+    background-image: url('/images/zsosa.jpg');
+    background-size: cover;
+}
+.storm-staff {
+    background-image: url('/images/staff-of-storms.png');
+    background-size: cover;
+}
+ 
+/* Character Ability Page */
 .character-sheet {
     display:flex;
     flex-direction: column;
@@ -120,15 +179,81 @@ a:visited {
     width:100%;
     height:15vh;
 }
-.title {
-    text-align: center;
-    color:var(--crimson);
-    font-weight:700;
+.page-divider {
+    background-color: var(--crimson);
+    box-shadow: 0 0 0 3px var(--gold), 0 0 0 5px white;
+    border:3px solid var(--gold);
+    border-radius: 12px;
+    width:100%;
+    text-shadow:-1px -1px 0 #ffffff, 1px -1px 0 #7c7c7c, -1px 1px 0 #000000, 1px 1px 0 #000000;
+    letter-spacing: 0.15rem;
+    color:var(--gold);
+    font-family: 'Antone';
 }
-.title2 {
+.section-header-j {
+    background-color:var(--crimson);
+    box-shadow: 0 0 0 3px var(--gold), 0 0 0 5px white;
+    border:3px solid var(--gold);
+    border-radius: 12px;
+    color:var(--gold);
+    text-align: center;
+    text-shadow:-1px -1px 0 #ffffff, 1px -1px 0 #7c7c7c, -1px 1px 0 #000000, 1px 1px 0 #000000;
+    letter-spacing: 0.15rem;
+    margin:10px;
+}
+/* Card Selectors */
+.card-header {
     text-align: center;
     color:white;
     font-weight:700;
+    font-size:18px;
+}
+.card-midheader {
+    text-align: center;
+    color:white;
+    font-weight:700;
+    font-size:16;
+    margin-bottom:5px;
+}
+.card-subheader {
+    text-align: center;
+    color:var(--crimson);
+    font-weight:700;
+    margin-bottom:5px;
+}
+.black-header {
+    color:black;
+    font-size:16;
+    font-weight:600;
+    text-align: center;
+}
+.card-container {
+    display:flex;
+    flex-direction: column;
+    padding:10px;
+    margin:10px;
+    border:5px solid var(--crimson);
+    border-radius: 12px;
+}
+.card-feature {
+    background-color: var(--background-opacity);
+    padding:10px;
+    border:3px outset var(--gold);
+    border-radius: 8px;
+}
+.unequipped-card-collection {
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.extra-domain-cards {
+    display:flex;
+    flex-direction: column;
+    padding:10px;
+    margin:10px;
+    border-radius: 8px;
+    width:92vw;
 }
 .character-auras {
     display:flex;
@@ -177,6 +302,11 @@ a:visited {
 .conditions {
     display:flex;
 }
+.conditions>* {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 .resistance-container {
     text-align: center;
     padding:10px;
@@ -186,13 +316,13 @@ a:visited {
     min-width:40vw;
     justify-content: space-evenly;
     text-align: center;
-    background-color: var(--background-opacity);
+    background-color: var(--crimson);
     border-radius: 8px;
     padding:10px;
     margin:10px;
 }
 .evasion,.armor,.armor-slots {
-    background-color:var(--background-color);
+    background-color:var(--white);
     border:3px solid var(--gold);
     border-radius: 8px;
     padding:10px;
@@ -213,7 +343,7 @@ a:visited {
     text-align: center;
     margin:10px;
     padding:10px 5px 10px 5px;
-    background-color: var(--background-opacity);
+    background-color: var(--crimson);
     border-radius: 8px;
     height:100%;
 }
@@ -342,7 +472,7 @@ a:visited {
 .equip-container {
     display:flex;
     flex-direction: column;
-    width:95vw;
+    width:65vw;
 }
 .item {
     display:flex;
@@ -374,7 +504,37 @@ a:visited {
 .card-buttons {
     display:flex;
 }
-.card-buttons>* {
+.flex-column {
+    display:flex;
+    flex-direction: column;
+    flex:1;
+    text-align: center;
+    color:var(--crimson);
+    font-weight: 700;
+}
+
+.domain-card {
+    border:3px solid var(--gold);
+    border-radius: 8px;
+    padding:10px;
+    margin:10px;
+}
+.card-desc {
+    display:flex;
+    flex-direction: column;
+    border:3px solid var(--gold);
+    background-color: var(--background-opacity);
+    border-radius: 8px;
+    padding:10px;
+    margin:20px;
+}
+.card-feature {
+    margin:10px;
+}
+
+
+/* Depreciated Selectors - Waiting for deletion */
+/* .card-buttons>* {
     flex:1;
     text-align: right;
     margin:10px;
@@ -385,52 +545,4 @@ a:visited {
 }
 .card-buttons>*>* {
     flex:1;
-}
-.domain-card {
-    border:3px solid var(--gold);
-    border-radius: 8px;
-    padding:10px;
-    margin:10px;
-}
-.card-effects {
-    background-color:var(--background-color);
-    border:3px solid var(--gold);
-    border-radius: 8px;
-    margin:10px;
-}
-.extra-domain-cards {
-    display:flex;
-    flex-direction: row;
-    padding:10px;
-    margin:10px;
-    border-radius: 8px;
-    width:92vw;
-}
-.codex {
-    background-image: url('/images/codex.jpg');
-    background-size: cover;
-}
-.splendor {
-    background-image:url('/images/splendor.jpg');
-    background-size: cover;
-}
-.valor {
-    background-image:url('/images/valor.jpg');
-    background-size: cover;
-}
-.sage {
-    background-image: url('/images/sage.jpg');
-    background-size: cover;
-}
-.bone {
-    background-image: url('/images/bone.jpg');
-    background-size: cover;
-}
-.grace {
-    background-image: url('/images/grace.jpg');
-    background-size: cover;
-}
-.midnight {
-    background-image: url('/images/midnight.jpg');
-    background-size: cover;
-}
+} */
