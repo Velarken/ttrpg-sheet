@@ -1,10 +1,14 @@
 class Domain {
-  constructor(name) {
+  constructor(name,availableTo) {
     this.name = name;
+    this.availableTo = availableTo // list of subclasses each domain appears with
     this.domainCardsArray = [];
   }
   addToDomain(card) {
-    this.domainCardsArray.push(card);
+    return this.domainCardsArray.push(card);  // add new card to this.domain's array
+  }
+  checkAvailable() {
+    // check if a given subclass is compatable with a given domain
   }
 }
 class DomainCard {
