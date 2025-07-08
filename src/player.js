@@ -1,5 +1,5 @@
-class User {
-  constructor(characters) {
+.class User {
+  constructor() {
     this.characters = [];
   }
   addCharacter(name,level,playerClass,race) {
@@ -25,11 +25,35 @@ class Character {
     }
   }
   updateLevel() {
-    this.level += 1;
+    this.traits.level += 1;
+  }
+  addAgility() {
+    this.traits.agility += 1;
+  }
+  addFinesse() {
+    this.traits.finesse += 1;
+  }
+  addInstinct() {
+    this.traits.instinct += 1;
+  }
+  addKnowledge() {
+    this.traits.knowledge += 1;
+  }
+  addPresence() {
+    this.traits.presence += 1;
+  }
+  addStrength() {
+    this.traits.strength += 1;
   }
 }
-export const jasper = new Character('jasper',1,"wizard","seraph","half elf")
+export const jasper = new Character('jasper',1,"wizard","seraph","half elf");
+const dillon = new User();
+dillon.addCharacter(jasper);
+jasper.addAgility();
+console.log("jasper")
 console.table(jasper)
+console.log("dillon")
+console.table(dillon.characters[0]);
 
 
 
