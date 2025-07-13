@@ -7,13 +7,12 @@ class User {
   }
 }
 class Character {
-  constructor(name,level,mainClass,subClass,race) {
+  constructor(name,level,race) {
     this.name = name;
     this.level = level;
-    this.mainClass = mainClass;
-    this.subClass = subClass
     this.race = race;
     this.domainEffects = [];
+    this.domainLoadout = [];
     this.traits =
     {
       agility:0,
@@ -45,28 +44,31 @@ class Character {
   addStrength() {
     this.traits.strength += 1;
   }
+  addClass(chosenMainClass) {
+    this.mainClass = chosenMainClass;
+  }
+  addSubClass(chosenSubClass) {
+    this.subClass = chosenSubClass;
+  }
+  addDomainEffect(card) {
+    this.domainEffects.push(card); // push individual domain card to personal array
+  }
+  addCardToLoadout(card) {
+    this.domainLoadout.push(card)
+  }
+  removeCardFromLoadout(card) {
+    let index = this.domainLoadout.indexOf(card);
+    this.domainLoadout.splice(index,1)
+  }
 }
-export const jasper = new Character('jasper',1,"wizard","seraph","half elf");
-const dillon = new User();
+export const jasper = new Character('jasper',1,"half elf");
+jasper.addClass("wizard object");
+export const dillon = new User();
 dillon.addCharacter(jasper);
 jasper.addAgility();
+
+// console testing
 console.log("jasper")
 console.table(jasper)
 console.log("dillon")
 console.table(dillon.characters[0]);
-
-
-
-class Race {
-
-}
-
-// add new key:value pair to domain card object using feature name as key and feature desc and value
-/* let myObject = {
-  existingKey: 'existingValue'
-};
-
-let newKey = 'dynamicKey';
-let newValue = 'dynamicValue';
-
-myObject[newKey] = newValue; */

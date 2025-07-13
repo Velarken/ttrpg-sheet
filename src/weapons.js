@@ -1,0 +1,6 @@
+class MeleeWeapon {
+
+}
+class RangedWeapon {
+
+}
