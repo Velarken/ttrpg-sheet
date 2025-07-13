@@ -7,5 +7,42 @@
 </head>
 <body>
 
+    <!-- All Character Nav -->
+  <div class="mainNav" id="mainNav">
+    <li><a href="">Jasper</a></li>
+    <li><a href="">Luna</a></li>
+    <li><a href="">Ravy</a></li>
+  </div>
+  <!-- Individual Character Menu -->
+  <div class="subNav" id="characterNav">
+    <li><a href="">Weapons & Items</a></li>
+    <li><a href="">Domain Cards</a></li>
+    <li><a href="">Combat Companions</a></li>
+  </div>
+    <!-- Dice Roller -->
+  <div class="diceRoller" id="diceRoller">
+    <div class="title" id="rollListTitle">Roll History</div>
+    <div class="rollOutputs" id="rollOutputs">
+      <div class="roll" id="damageRoll">
+        <h5 class="rollFor" id="dmgRollFor">Your Last Roll</h5>
+        <div class="rollOutput" id="dmgRollOutput"></div>
+      </div>
+      <div class="roll" id="reactionRoll">
+        <h5 class="rollFor" id="reactRollFor">Your Last Roll</h5>
+        <div class="rollOutput" id="reactRollOutput"></div>
+      </div>
+      <div class="roll" id="abilityRoll">
+        <h5 class="rollFor" id="abilityRollFor">Your Last Roll</h5>
+        <div class="rollOutput" id="abilityRollOutput"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Page Content -->
+  <div class="characterContainer" id="characterContainer"></div>
+
+  </div>
+
+
+  <script type="module" src="./index.js"></script>
 </body>
 </html>
