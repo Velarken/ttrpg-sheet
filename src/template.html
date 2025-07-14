@@ -21,7 +21,6 @@
   </div>
     <!-- Dice Roller -->
   <div class="diceRoller" id="diceRoller">
-    <div class="title" id="rollListTitle">Roll History</div>
     <div class="rollOutputs" id="rollOutputs">
       <div class="roll" id="damageRoll">
         <h5 class="rollFor" id="dmgRollFor">Your Last Roll</h5>
@@ -38,8 +37,185 @@
     </div>
   </div>
   <!-- Page Content -->
-  <div class="characterContainer" id="characterContainer"></div>
+  <div class="characterContainer" id="characterContainer">
+    <!-- Stats, Resisitances, and Condition Page -->
+    <div class="characterStats" id="characterStatsContainer">
+      <!-- Conditions -->
+      <div class="allConditions" id="characterConditionContainer">
+        <h5 class="title">Conditions</h5>
+        <div class="conditionContainer" id="vulnerableContainer">
+          <h5 class="title">Vulnerable</h5>
+          <input type="checkbox" id="vulnerable" class="condition">
+        </div>
+        <div class="conditionContainer" id="restrainedContainer">
+          <h5 class="title">Restrained</h5>
+          <input type="checkbox" class="condition" id="restrained">
+        </div>
+        <div class="conditionContainer" id="hiddenContainer">
+          <h5 class="title">Hidden</h5>
+          <input type="checkbox" class="condition" id="hidden">
+        </div>
+      </div>
+      <!-- Resistances and Immunities -->
+      <div class="allResistances" id="characterResistancesContainer">
+        <h5 class="title">Resistances</h5>
+        <div class="resistContainer" id="resistances">
+          <!-- Add resistances as <li class="resistance"> -->
+        </div>
+        <h5 class="title">Immunities</h5>
+        <div class="resistContainer" id="immunities">
+          <!-- Add Immunities as <li class="immunity" -->
+        </div>
+      </div>
+      <!-- Stats -->
+      <div class="characterStats" id="statsContainer">
+        <div class="stat" id="evasionContainer">
+          <h5 class="title">Evasion</h5>
+          <div class="statOutput" id="evasion"></div>
+        </div>
+        <div class="stat" id="armorContainer">
+          <h5 class="title">Armor</h5>
+          <div class="statOutput" id="armor"></div>
+        </div>
+        <div class="stat" id="armorSlots">
+          <h5 class="title">Armor Slots</h5>
+            <!-- add input type checkbox per character armor total -->
+        </div>
+      </div>
+      <!-- Traits -->
+      <div class="traitContainer" id="traitContainer">
+        <div class="trait" id="agility">
+          <h5 class="title">Agility</h5>
+          <div class="traitButtons" id="agilityButtons">
+            <h6 class="title">Active Roll</h6>
+            <button class="dualityRoll" id="agilityDuality"></button>
+            <h6 class="title">Reaction Roll</h6>
+            <button class="reactionRoll" id="agilityReaction"></button>
+          </div>
+        </div>
+        <div class="trait" id="Finesse">
+          <h5 class="title">Finesse</h5>
+          <div class="traitButtons" id="finesseButtons">
+            <h6 class="title">Active Roll</h6>
+            <button class="dualityRoll" id="finesseDuality"></button>
+            <h6 class="title">Reaction Roll</h6>
+            <button class="reactionRoll" id="finesseReaction"></button>
+          </div>
+        </div>
+        <div class="trait" id="presence">
+          <h5 class="title">Presence</h5>
+          <div class="traitButtons" id="presenceButtons">
+            <h6 class="title">Active Roll</h6>
+            <button class="dualityRoll" id="presenceDuality"></button>
+            <h6 class="title">Reaction Roll</h6>
+            <button class="reactionRoll" id="presenceReaction"></button>
+          </div>
+        </div>
+        <div class="trait" id="instinct">
+          <h6 class="title">Instinct</h6>
+          <div class="traitButtons" id="instinctButtons">
+            <button class="dualityRoll" id="instinctDuality"></button>
+            <h6 class="title">Reaction Roll</h6>
+            <button class="reactionRoll" id="instinctReaction"></button>
+          </div>
+        </div>
+        <div class="trait" id="strength">
+          <h5 class="title">Strength</h5>
+          <div class="traitButtons" id="strengthButtons">
+            <h6 class="title">Active Roll</h6>
+            <button class="dualityRoll" id="strengthDuality"></button>
+            <h6 class="title">Reaction Roll</h6>
+            <button class="reactionRoll" id="strengthReaction"></button>
+          </div>
+        </div>
+        <div class="trait" id="knowledge">
+          <h5 class="title">Knowledge</h5>
+          <div class="classButtons" id="knowledgeButtons">
+            <h6 class="title">Active Roll</h6>
+            <button class="dualityRoll" id="knowledgeDuality"></button>
+            <h6 class="title">Reaction Roll</h6>
+            <button class="reactionRoll" id="knowledgeReaction"></button>
+          </div>
+        </div>
+      </div>
+      <!-- Damage Thresholds -->
+      <div class="thresholdContainer">
+        <div class="damageThresholds">
+          <div class="thresholdBackground"></div>
+          <div class="thresholdValue" id="minorValue"></div>
+          <div class="thresholdValue" id="majorValue"></div>
+          <div class="thresholdValue" id="severeValue"></div>
+          <div class="thresholdValue" id="massiveValue"></div>
+          <div class="threshold" id="minor">Minor Damage</div>
+          <div class="threshold" id="major">Major Damage</div>
+          <div class="threshold" id="severe">Severe Damage</div>
+          <div class="threshold" id="massive">Massive Damage</div>
+        </div>
+      </div>
+      <!-- Player Economy -->
+       <div class="playerTrackables" id="hpStressContainer">
+        <!-- Player HP -->
+        <div class="hpContainer" id="hpContainer">
+          <h5 class="title">HP</h5>
+          <div class="hpTickMarks">
+            <!-- Add ticks based on player object value -->
+             <input type="checkbox" class="hpTick" id="hp1">
+             <input type="checkbox" class="hpTick" id="hp2">
+             <input type="checkbox" class="hpTick" id="hp3">
+          </div>
+        </div>
+        <!-- Player Stress -->
+        <div class="stressContainer" id="stressContainer">
+          <h5 class="title">Stress</h5>
+          <div class="stressTickMarks">
+            <input type="checkbox" class="stressTick" id="stress1">
+            <input type="checkbox" class="stressTick" id="stress2">
+            <input type="checkbox" class="stressTick" id="stress3">
+          </div>
+        </div>
+        <!-- Player Experiences -->
+         <div class="experienceContainer">
+          <h5 class="title">Experiences</h5>
+          <div class="experiences">
+            <div class="experience" id="exp1">
+              <h5 class="title"></h5>
+              <div class="expDesc"></div>
+              <button class="dualityRoll" id="experience1Roll"></button>
+            </div>
+            <div class="experience" id="exp2">
+              <h5 class="title"></h5>
+              <div class="expDesc"></div>
+              <button class="dualityRoll" id="experience2Roll"></button>
+            </div>
+            <div class="experience" id="exp3">
+              <h5 class="title"></h5>
+              <div class="expDesc"></div>
+              <button class="dualityRoll" id="experience3Roll"></button>
+            </div>
+            <div class="experience" id="exp4">
+              <h5 class="title"></h5>
+              <div class="expDesc"></div>
+              <button class="dualityRoll" id="experience4Roll"></button>
+            </div>
+            <div class="experience" id="exp5">
+              <h5 class="title"></h5>
+              <div class="expDesc"></div>
+              <button class="dualityRoll" id="experience5Roll"></button>
+            </div>
+          </div>
+         </div>
+       </div>
+    </div>
 
+    <!-- Domains and Class Effects -->
+    <div class="characterEffects" id="characterEffectsContainer">
+
+    </div>
+
+    <!-- Weapons, Armor & Consumables -->
+    <div class="characterEquipment" id="characterEquipmentContainer">
+
+    </div>
   </div>
 
 
