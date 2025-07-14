@@ -69,6 +69,10 @@
       </div>
       <!-- Stats -->
       <div class="characterStats" id="statsContainer">
+        <div class="stat" id="proficiencyContainer">
+          <h5 class="title">Proficiency</h5>
+          <div class="statOutput" id="proficiency"></div>
+        </div>
         <div class="stat" id="evasionContainer">
           <h5 class="title">Evasion</h5>
           <div class="statOutput" id="evasion"></div>
@@ -173,8 +177,17 @@
             <input type="checkbox" class="stressTick" id="stress3">
           </div>
         </div>
+        <!-- Player Hope -->
+        <div class="hopeContainer" id="hopeContainer">
+          <h5 class="title">Hope</h5>
+          <div class="hopeTickMarks">
+            <input type="checkbox" class="hopeTick" id="hope1">
+            <input type="checkbox" class="hopeTick" id="hope2">
+            <input type="checkbox" class="hopeTick" id="hope3">
+          </div>
+        </div>
         <!-- Player Experiences -->
-         <div class="experienceContainer">
+        <div class="experienceContainer">
           <h5 class="title">Experiences</h5>
           <div class="experiences">
             <div class="experience" id="exp1">
@@ -203,7 +216,7 @@
               <button class="dualityRoll" id="experience5Roll"></button>
             </div>
           </div>
-         </div>
+        </div>
        </div>
     </div>
 
@@ -213,8 +226,74 @@
     </div>
 
     <!-- Weapons, Armor & Consumables -->
-    <div class="characterEquipment" id="characterEquipmentContainer">
+    <div class="characterEquipmentContainer" id="characterEquipmentContainer">
+      <!-- Currently Equipped Weapons -->
+      <div class="equippedWeapons" id="equippedWeapons">
+        <div class="primaryWeapon" id="primaryWeapon">
+          <div class="weaponName" id="primaryWeaponName"></div>
+          <div id="primaryWeaponTrait"></div>
+          <button class="dualityRoll" id="primaryWeaponToHit"></button>
+          <button class="damageRoll" id="primaryWeaponDmgRoll"></button>
+        </div>
+        <div class="secondaryWeapon" id="secondaryWeapon">
+          <div class="weaponName" id="secondaryWeaponName"></div>
+          <div id="secondaryWeaponTrait"></div>
+          <button class="dualityRoll" id="secondaryWeaponToHit"></button>
+          <button class="damageRoll" id="secondaryWeaponDmgRoll"></button>
+        </div>
+      </div>
+      <!-- Owned Equipment -->
+      <div class="characterEquipment" id="characterEquipment">
+        <!-- Weapons -->
+        <div class="weaponContainer">
+          <div class="weaponCard" id="weapon1">
+            <h5 class="title">weapon name</h5>
+            <div class="weaponButtons">
+              <h6 class="title">Roll To Hit</h6>
+              <button class="dualityRoll" id="weaponNameHitRoll"></button>
+              <h6 class="title">Roll Damage</h6>
+              <button class="dualityRoll" id="weaponNameDmgRoll"></button>
+            </div>
+            <div class="weaponFeatures">
+              <h5 class="title">Weapon Features</h5>
+              <div class="weaponFeature">
+                <h6 class="title">Weapon Effect</h6>
+                <div class="weaponFeatureDesc"></div>
+                <div class="weaponFeatureBtns">
+                  <button class="dualityRoll"></button>
+                </div>
+              </div>
 
+            </div>
+          </div>
+          <div class="weaponCard" id="weapon2">
+            <h5 class="title">weapon name</h5>
+            <div class="weaponButtons">
+              <h6 class="title">Roll To Hit</h6>
+              <button class="dualityRoll" id="weaponNameHitRoll"></button>
+              <h6 class="title">Roll Damage</h6>
+              <button class="dualityRoll" id="weaponNameDmgRoll"></button>
+            </div>
+          </div>
+          <div class="weaponCard" id="weapon3">
+            <h5 class="title">weapon name</h5>
+            <div class="weaponButtons">
+              <h6 class="title">Roll To Hit</h6>
+              <button class="dualityRoll" id="weaponNameHitRoll"></button>
+              <h6 class="title">Roll Damage</h6>
+              <button class="dualityRoll" id="weaponNameDmgRoll"></button>
+            </div>
+          </div>
+        </div>
+        <!-- Armor -->
+        <div class="armorContainer">
+
+        </div>
+        <!-- Consumables -->
+        <div class="consumableContainer">
+
+        </div>
+      </div>
     </div>
   </div>
 
