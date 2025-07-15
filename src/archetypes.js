@@ -1,21 +1,42 @@
-import {jasper} from "./player.js"
-
-export class Archetype {
-  constructor(subclass,domains,startHP,startEvasion,identity,hopeFeature,archetypeFeatures) {
-    this.subclass = subclass
-    this.domains = Object.values(domains); // make array from object values
-    this.startEvasion = startEvasion;
-    this.startHP = startHP;
-    this.identity = identity;
-    this.archetypeFeatures = archetypeFeatures; // object containing all archetype features
+class PlayableClass {
+  constructor(hp,hope,stress,evasion,availableDomains,subclass) {
+    this.hp = hp;
+    this.hope = hope;
+    this.stress = stress;
+    this.evasion = evasion;
+    this.availableDomains = availableDomains;
+    this.classItems = [];
+    this.hopeFeatures = [];
+    this.classFeatures = []
+    this.subclass = subclass // object with it's own subset of features
+  }
+  subclassChoice() {
+    this.subclass = new PlayableSubClass();
+  }
+  addHopeFeature(feature) {
+    this.hopeFeatures.push(feature)
   }
 }
-export class Wizard extends Archetype {
-  addHopeFeature() {
-
+class PlayableSubClass {
+  constructor(spellcastTrait,desc) {
+    this.spellcastTrait = spellcastTrait;
+    this.desc = desc;
+    this.foundationFeatures = {};
+    this.specializationFeatures = [];
+    this.masteryFeatures = [];
+  }
+  addFoundationFeature(feature) {
+    this.foundationFeatures.push(feature);
+  }
+  addSpecializationFeature(feature) {
+    this.specializationFeatures.push(feature);
+  }
+  addMasteryFeature(feature) {
+    this.masteryFeatures.push(feature)
   }
 }
-export const wizard = new Wizard("school of war",{domain:"codex", domain2:"splendor"},5,11,jasper,"hope feature object","archetype feature object")
 
-console.log(wizard.domains);
-console.table(wizard)
+export default function createPlayableClass(player) {
+  let newClass = new PlayableClass();
+  player.class = newClass;
+}
