@@ -1,3 +1,4 @@
+let  communityList = [];
 class Community {
   constructor(name,description,benefit) {
     this.name = name;
@@ -8,7 +9,10 @@ class Community {
 }
 // data for DOM use for all current Community objects
 
-export default function createCommunity(player) {
-  let newCommunity = new Community();
-  player.community = newCommunity;
+export default function createCommunity(name,description,benefit) {
+  let newCommunity = new Community(name,description,benefit);
+  communityList.push(newCommunity);
+}
+export function assignCommunity(player,chosenCommunity) {
+  player.community = chosenCommunity;
 }

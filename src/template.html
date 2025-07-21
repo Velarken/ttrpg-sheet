@@ -6,58 +6,62 @@
   <title>Document</title>
 </head>
 <body>
-
-    <!-- All Character Nav -->
-  <div class="mainNav" id="mainNav">
-    <li><a href="">Jasper</a></li>
-    <li><a href="">Luna</a></li>
-    <li><a href="">Ravy</a></li>
-  </div>
-  <!-- Individual Character Menu -->
-  <div class="subNav" id="characterNav">
-    <li><a href="">Weapons & Items</a></li>
-    <li><a href="">Domain Cards</a></li>
-    <li><a href="">Combat Companions</a></li>
-  </div>
-    <!-- Dice Roller -->
-  <div class="diceRoller" id="diceRoller">
-    <div class="rollOutputs" id="rollOutputs">
+  <div class="topContainer"> <!-- Fixed Position -->
+    <div class="nav frame">
+      <!-- All Character Nav -->
+      <div class="navMenu" id="mainNav">
+        <button class="menuLink" id="jasperPageInfo">Jasper</button>
+        <button class="menuLink" id="ravyPageInfo">Ravy</button>
+        <button class="menuLink" id="lunaPageInfo">Luna</button>
+      </div>
+      <!-- Individual Character Menu -->
+      <div class="navMenu" id="characterNav">
+        <button class="menuLink" id="weaponsItems">Weapons & Items</button>
+        <button class="menuLink" id="domainCards">Domain Cards</button>
+        <button class="menuLink" id="combatCompanions">Combat Companions</button>
+      </div>
+    </div>
+      <!-- Dice Roller -->
+    <div class="diceRoller frame" id="diceRoller">
       <div class="roll" id="damageRoll">
         <h5 class="rollFor" id="dmgRollFor">Your Last Roll</h5>
-        <div class="rollOutput" id="dmgRollOutput"></div>
+        <div class="rollOutput" id="dmgRollOutput">--</div>
       </div>
-      <div class="roll" id="reactionRoll">
+      <div class="roll" id="reactionRoller">
         <h5 class="rollFor" id="reactRollFor">Your Last Roll</h5>
-        <div class="rollOutput" id="reactRollOutput"></div>
+        <div class="rollOutput" id="reactRollOutput">--</div>
       </div>
-      <div class="roll" id="abilityRoll">
+      <div class="roll" id="abilityRoller">
         <h5 class="rollFor" id="abilityRollFor">Your Last Roll</h5>
-        <div class="rollOutput" id="abilityRollOutput"></div>
+        <div class="rollOutput" id="abilityRollOutput">--</div>
       </div>
     </div>
   </div>
+  <div class="spacer"></div>
   <!-- Page Content -->
   <div class="characterContainer" id="characterContainer">
     <!-- Stats, Resisitances, and Condition Page -->
-    <div class="characterStats" id="characterStatsContainer">
       <!-- Conditions -->
-      <div class="allConditions" id="characterConditionContainer">
+    <div class="characterStatsContainer frame">
+      <div class="playerConditions">
         <h5 class="title">Conditions</h5>
-        <div class="conditionContainer" id="vulnerableContainer">
-          <h5 class="title">Vulnerable</h5>
-          <input type="checkbox" id="vulnerable" class="condition">
-        </div>
-        <div class="conditionContainer" id="restrainedContainer">
-          <h5 class="title">Restrained</h5>
-          <input type="checkbox" class="condition" id="restrained">
-        </div>
-        <div class="conditionContainer" id="hiddenContainer">
-          <h5 class="title">Hidden</h5>
-          <input type="checkbox" class="condition" id="hidden">
+        <div class="allConditions" id="characterConditionContainer">
+          <div class="conditionContainer" id="vulnerableContainer">
+            <h5 class="title">Vulnerable</h5>
+            <input type="checkbox" id="vulnerable" class="condition">
+          </div>
+          <div class="conditionContainer" id="restrainedContainer">
+            <h5 class="title">Restrained</h5>
+            <input type="checkbox" class="condition" id="restrained">
+          </div>
+          <div class="conditionContainer" id="hiddenContainer">
+            <h5 class="title">Hidden</h5>
+            <input type="checkbox" class="condition" id="hidden">
+          </div>
         </div>
       </div>
       <!-- Resistances and Immunities -->
-      <div class="allResistances" id="characterResistancesContainer">
+      <div class="characterStatsContainer" id="resistanceImmunity">
         <h5 class="title">Resistances</h5>
         <div class="resistContainer" id="resistances">
           <!-- Add resistances as <li class="resistance"> -->
@@ -86,8 +90,9 @@
             <!-- add input type checkbox per character armor total -->
         </div>
       </div>
-      <!-- Traits -->
-      <div class="traitContainer" id="traitContainer">
+    </div>
+    <!-- Traits -->
+      <div class="characterStatsContainer frame" id="traitContainer">
         <div class="trait" id="agility">
           <h5 class="title">Agility</h5>
           <div class="buttonCard" id="agilityButtons">
@@ -116,8 +121,9 @@
           </div>
         </div>
         <div class="trait" id="instinct">
-          <h6 class="title">Instinct</h6>
+          <h5 class="title">Instinct</h5>
           <div class="buttonCard" id="instinctButtons">
+            <h6 class="title">Active Roll</h6>
             <button class="dualityRoll" id="instinctDuality"></button>
             <h6 class="title">Reaction Roll</h6>
             <button class="reactionRoll" id="instinctReaction"></button>
@@ -142,22 +148,20 @@
           </div>
         </div>
       </div>
+    <div class="characterStatsContainer ">
       <!-- Damage Thresholds -->
-      <div class="thresholdContainer">
-        <div class="damageThresholds">
-          <div class="thresholdBackground"></div>
-          <div class="thresholdValue" id="minorValue"></div>
-          <div class="thresholdValue" id="majorValue"></div>
-          <div class="thresholdValue" id="severeValue"></div>
-          <div class="thresholdValue" id="massiveValue"></div>
-          <div class="threshold" id="minor">Minor Damage</div>
-          <div class="threshold" id="major">Major Damage</div>
-          <div class="threshold" id="severe">Severe Damage</div>
-          <div class="threshold" id="massive">Massive Damage</div>
-        </div>
+      <div class="thresholdContainer frame">
+        <div class="thresholdBackground"></div>
+        <div class="thresholdValue" id="minorValue"></div>
+        <div class="thresholdValue" id="majorValue"></div>
+        <div class="thresholdValue" id="severeValue"></div>
+        <div class="thresholdValue" id="massiveValue"></div>
+        <div class="threshold" id="minor">Minor Damage</div>
+        <div class="threshold" id="major">Major Damage</div>
+        <div class="threshold" id="severe">Severe Damage</div>
       </div>
       <!-- Player Economy -->
-       <div class="playerTrackables" id="hpStressContainer">
+       <div class="characterStatsContainer frame" id="hpStressContainer">
         <!-- Player HP -->
         <div class="hpContainer" id="hpContainer">
           <h5 class="title">HP</h5>
@@ -186,8 +190,10 @@
             <input type="checkbox" class="hopeTick" id="hope3">
           </div>
         </div>
+      </div>
         <!-- Player Experiences -->
-        <div class="experienceContainer">
+      <div class="characterStatsContainer">
+        <div class="experienceContainer frame">
           <h5 class="title">Experiences</h5>
           <div class="experiences">
             <div class="experience" id="exp1">

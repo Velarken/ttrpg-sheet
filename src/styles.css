@@ -1,3 +1,9 @@
+body {
+  display:flex;
+  flex-direction: column;
+  width:98vw;
+  position:relative;
+}
 .flexCardColumn { /* All Column Containers */
   display:flex;
   flex-direction: column;
@@ -5,8 +11,82 @@
 .flexCardRow { /* All Row  Containers */
   display:flex;
 }
+.traitContainer {
+  display:flex;
+  width:100%;
+}
 .buttonCard {  /* All Row Button Containers */
   display:flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.diceRoller {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.navMenu {
+  display:flex;
+  justify-content: center;
+  list-style: none;
+}
+li {
+  padding:10px;
+}
+.thresholdContainer {
+  display:flex;
+}
+.threshold {
+  padding:10px;
+}
+.playerConditions {
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+}
+.hpContainer, .hopeContainer, .stressContainer {
+  display:flex;
+  flex-direction: column;
+  padding:10px;
+  text-align: center;
+}
+.frame {
+  margin:10px;
+  border:solid 5px rgb(35, 4, 70);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  padding:1em;
+  line-height:1.5em;
+  background:hsla(67, 95%, 95%, 1);
+}
+.characterStatsContainer {
+  display:flex;
+  justify-content: space-evenly;
+}
+.allConditions {
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width:50vw;
+}
+.roll {
+  margin:10px;
+}
+.menuLink {
+  border: none;
+  background: none;
+  height:4vh;
+  width:10vw;
+}
+.topContainer {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.spacer {
+  height:18vh;
 }
