@@ -42,6 +42,12 @@ a:visited {
     text-shadow:-1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #ffffff, 1px 1px 0 #000;
 }
 /* All Pages */
+.card-collection {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    width:90vw;
+}
 .nav-container {
     display:flex;
     list-style:none;
