@@ -20,6 +20,7 @@ body {
     display:flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     font-family: 'Antone';
 }
 button {
@@ -41,12 +42,19 @@ a:visited {
     font-family: 'Antone';
     text-shadow:-1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #ffffff, 1px 1px 0 #000;
 }
+.glow {
+    box-shadow: 0 0 50px 15px #f9c51c;
+}
+.fade {
+    box-shadow: 0 0 50px 15px #ff0000;
+}
 /* All Pages */
 .card-collection {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 10px;
+    column-gap: 10px;
     width:90vw;
+    justify-content: space-between;
 }
 .nav-container {
     display:flex;
