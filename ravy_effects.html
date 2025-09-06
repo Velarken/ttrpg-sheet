@@ -230,22 +230,116 @@
             </div>
         </div> <!-- End of Domain Cards -->  
     </div>
-    <div class="container">
-        <div class="card-collection">
-            <div class="card-container rogue" id="rogue-feature">
-
-            </div>
-            <div class="card-contianer rogue" id="rogue-sub-feature">
-
-            </div>
-            <div class="card-contianer ancestry" id="ravy-ancestry">
-
-            </div>
-            <div class="card-container community" id="ravy-community">
-                
-            </div>
-        </div> <!-- End of Character Features -->
-    </div>
+        <div class="container">
+            <div class="card-collection">
+                <div class="card-container beastform" id="mythic-aerial-hunter">
+                    <div class="card-header">Mythic Aerial Hunter</div>
+                    <div class="card-feature">
+                        <div class="card-subheader">Carrier</div>
+                        <div class="card-description">
+                            You can carry up to three willing allies with you when you move in this form.
+                        </div>
+                    </div>
+                    <div class="card-feature">
+                        <div class="card-subheader">Deadly Strike</div>
+                        <div class="card-description">
+                            While transformed, as your action, you can fly at will and move up to Far range. When 
+                            you move in a straight line into Melee range of a target from at least Close range and 
+                            make an attack against that target in the same action, you may reroll all damage dice 
+                            that rolled a lower result than <strong>5</strong>.
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container hope-feature rogue" id="rogue-hope">
+                    <div class="card-header">Hope Feature</div>
+                    <div class="card-feature">
+                        <div class="card-subheader">Rogue's Dodge</div>
+                        <div class="card-description">
+                            <strong>Spend 3 Hope</strong> to gain a +2 bonus to your Evasion until the next 
+                            time a weapon attack succeeds against you. Otherwise, this bonus lasts until your 
+                            next rest.
+                        </div>
+                        <div class="card-buttons">
+                            <button>3 Hope</button>
+                            <p>Dodging:</p>
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container rogue" id="rogue-feature">
+                    <div class="card-header">Rogue Class Features</div>
+                    <div class="card-feature">
+                        <div class="card-subheader">Cloaked</div>
+                        <div class="card-description">
+                            Any time you would be <em>Hidden</em>, you are instead <em>Cloaked</em>.
+                            In addition to the benefits of the Hidden condition, while Cloaked you 
+                            remain unseen if you are stationary when an adversary moves to where they
+                            would normally see you. After you make an attack or move within the line of 
+                            sight of an enemy, you are no longer Cloaked.
+                        </div>
+                        <div class="card-buttons">
+                            <p>Currently Cloaking:</p>
+                            <input type="checkbox" id="cloaked">
+                        </div>
+                    </div>
+                    <div class="card-feature">
+                        <div class="card-subheader">Sneak Attack</div>
+                        <div class="card-description">
+                            When you succeed on an attack while <em>Cloaked</em> or while an ally is within
+                            Melee rnage of your target, add <strong>4d6</strong> to your damage roll.
+                        </div>
+                        <div class="card-buttons">
+                            <button>4d6</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container rogue" id="rogue-sub-feature">
+                    <div class="card-header">Nightwalker Feature</div>
+                    <div class="card-feature">
+                        <div class="card-subheader">Shadow Stepper</div>
+                        <div class="card-description">
+                            You can move from shadow to shadow. When you move into an area of darkness or 
+                            shadow cast by another creature or object, you can <strong>mark a Stress</strong> 
+                            to disappear from where you are and reappear inside another shadow within Far
+                            range. When you reappear, you are <em>Cloaked</em>.
+                        </div>
+                        <div class="card-buttons">
+                            <button>1 stress</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container ancestry" id="ravy-ancestry">
+                    <div class="card-header">Ancestry Features</div>
+                    <div class="card-feature">
+                        <div class="card-subheader">High Stamina</div>
+                        <div class="card-description">
+                            Gain an addition Stress slot at character creation.
+                        </div>
+                    </div>
+                    <div class="card-feature">
+                        <div class="sub-header">Elemental Breath</div>
+                        <div class="card-description">
+                            Exhale an Icy Mist at any number of targets within Very Close range. Make 
+                            a weapon attack using your <em>Instinct</em>, dealing magic damage.
+                        </div>
+                        <div class="card-buttons">
+                            <button>+2 Instinct</button>
+                            <button>5d8</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container community" id="ravy-community">
+                    <div class="card-header">Community Feature</div>
+                    <div class="card-feature">
+                        <div class="sub-header">Ridgeborne</div>
+                        <div class="card-description">
+                            You gain advantage on rolls to traverse dangerous cliffs and ledges, navigate 
+                            harsh environments, and use your survival knowledge.
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End of Character Features -->
+        </div>
     <div class="empty-space"></div> <!-- Spacer element to allow page view with dice roller -->
 </body>
 </html>
