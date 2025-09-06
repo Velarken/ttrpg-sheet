@@ -64,6 +64,7 @@ a:visited {
     height:auto;
     border:5px solid var(--crimson);
     border-radius: 12px;
+    background-color: #000;
 }
 .card-feature {
     background-color: var(--background-opacity);
