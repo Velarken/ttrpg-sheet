@@ -50,11 +50,29 @@ a:visited {
 }
 /* All Pages */
 .card-collection {
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 10px;
+    display:flex;
+    flex-wrap: wrap;
     width:90vw;
     justify-content: space-between;
+}
+.card-container {
+    display:flex;
+    flex-direction: column;
+    padding:10px;
+    margin:10px;
+    width:30%;
+    height:auto;
+    border:5px solid var(--crimson);
+    border-radius: 12px;
+}
+.card-feature {
+    background-color: var(--background-opacity);
+    padding:10px;
+    border:3px outset var(--gold);
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    height:auto;
 }
 .nav-container {
     display:flex;
@@ -83,7 +101,7 @@ a:visited {
     text-align: center;
     color:white;
     font-weight:700;
-    font-size:22px;
+    font-size:5vw;
 }
 /* Selectors for individual page colors */
 .jasper-outer {
@@ -219,14 +237,13 @@ a:visited {
 .card-header {
     text-align: center;
     color:white;
-    font-weight:700;
-    font-size:18px;
+    font-size:2vw;
 }
 .card-midheader {
     text-align: center;
     color:white;
     font-weight:700;
-    font-size:16;
+    font-size:5vw;
     margin-bottom:5px;
 }
 .card-subheader {
@@ -237,24 +254,11 @@ a:visited {
 }
 .black-header {
     color:black;
-    font-size:16;
+    font-size:5vw;
     font-weight:600;
     text-align: center;
 }
-.card-container {
-    display:flex;
-    flex-direction: column;
-    padding:10px;
-    margin:10px;
-    border:5px solid var(--crimson);
-    border-radius: 12px;
-}
-.card-feature {
-    background-color: var(--background-opacity);
-    padding:10px;
-    border:3px outset var(--gold);
-    border-radius: 8px;
-}
+
 .unequipped-card-collection {
     display:flex;
     flex-wrap: wrap;
@@ -412,7 +416,7 @@ a:visited {
     border-radius: 8px;
     background-color: white;
     text-align: center;
-    font-size:22px;
+    font-size:5vw;
     justify-content: center;
     align-items: center;
 }
@@ -559,4 +563,8 @@ a:visited {
 }
 .card-buttons>*>* {
     flex:1;
-} */
+} 
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;    
+*/

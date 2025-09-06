@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav-container  section-header-l">
+        <li><a href="jasper.html">Jasper</a></li>
+        <li><a href="luna.html">Luna</a></li>
+        <li><a href="ravy.html">Ravy</a></li>
+    </div>
+    <div class="sub-nav  section-header-l">
+        <li><a href="luna_equip.html">Weapons & Items</a></li>
+        <li><a href="luna_effects.html">Domain Cards</a></li>
+    </div>
+    <div class="dice-output-container jasper-outer">
+        <div class="title" id="roll-list">Roll History</div>
+        <div class="roll-list">
+            <div class="last-ability-roll">
+                <div class="subtitle"><strong>Your Last Duality Dice Roll</strong></div>
+                <div class="ability-output">No roll yet!</div>
+            </div> 
+            <div class="last-reaction-roll">
+                <div class="subtitle"><strong>Your Last Reaction Roll</strong></div>
+                <div class="reaction-output">No roll yet!</div>
+            </div>
+            <div class="last-damage-roll">
+                <div class="subtitle"><strong>Your Last Damage Roll </strong></div>
+                <div class="damage-output">No roll yet!</div>
+            </div>
+        </div>
+    </div>
+    <h2 class="title">Domain Cards</h2>
+    <div class="container">
+        <div class="card-collection">
+            <div class="card-container bone" id="i-see-it-coming">
+                <div class="card-head">
+                    <div class="card-header">I See It Coming</div>
+                    <input type="checkbox" class="active-card">
+                </div>
+                <div class="card-feature">
+                    <div class="card-description">When you're targeted by an attack made from beyond Melee range, 
+                        you can mark a Stress to roll a d4 and gain a bonus to your Evasion equal to the result 
+                        against the attack.
+                    </div>
+                    <div class="card-buttons">
+                        <button class="duality-roll">1 Stress</button>
+                        <button class="damage-roll">1d4</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container sage" id="vicious-entagle">
+                <div class="card-head">
+                    <div class="card-header">Viscious Entangle</div>
+                    <input type="checkbox" class="active-card">
+                </div>
+                <div class="card-feature">
+                    <div class="card-description">Make a Spellcast Roll against a target within Far range. On a 
+                        success, roots and vines reach out from the ground, dealing 1d8+1 physical damage and 
+                        temporarily Restraining the target.
+                        <br><br>Additionally on a success, you can spend a Hope to temporarily Restrain another 
+                        adversary within Very Close range of your target.
+                    </div>
+                    <div class="card-buttons">
+                        <button class="duality-roll">+1</button>
+                        <button class="damage-roll">1d8+1</button>
+                        <button>1 Hope</button>
+                    </div>
+                </div>
+            </div> 
+            <div class="card-container sage" id="gifted-tracker">
+                <div class="card-head">
+                    <div class="card-header">Gifted Tracker</div>
+                    <input type="checkbox" class="active-card">
+                </div>
+                <div class="card-feature">
+                    <div class="card-description">When you're tracking a specific creature or group of creatures based 
+                        on signs of their passage, you can <strong>spend any number of Hope</strong> and ask the GM that 
+                        many questions from the following list.
+                        <br><br>-   What direction did they go?
+                        <br>-   How long ago did they pass through?
+                        <br>-   What were they doing in this location?
+                        <br>-   How many of them were here?
+                        <br><br>When you encounter creatures you've tracked in this way, gain a +1 bonus to your Evasion 
+                        against them.
+                    </div>
+                    <div class="card-buttons">
+                        <button class="damage-roll">+6</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container sage" id="natures-tounge">
+                <div class="card-head">
+                    <div class="card-header">Nature's Tongue</div>
+                    <input type="checkbox" class="active-card">
+                </div>                            
+                <div class="card-feature">
+                    <div class="card-description">You can speak the language of the natural world. When you want to speak 
+                        to the plants and animals around you, make an Instinct Roll (12). On a success, they'll give you 
+                        the information they know. On a roll with Fear, their knowledge might be limited or come at a cost.
+                        <br><br>Additionally, before you make a Spellcast Roll while within a natural environment, you can 
+                        spend a Hope to gain a +2 bonus to the roll.
+                    </div>
+                    <div class="card-buttons">
+                        <button class="duality-roll">+3</button>
+                        <div>Environment Bonus</div>
+                        <input type="checkbox" class="active-effect">
+                    </div>
+                </div>
+            </div>
+            <div class="card-container bone" id="untouchable">
+                <div class="card-head">
+                    <div class="card-header">Untouchable</div>
+                    <input type="checkbox" class="active-card">
+                </div>
+                <div class="card-feature">
+                    <div class="card-description">
+                        Gain a bonus to your Evasion equal to half your Agility.
+                        <br>Removing this card from your loadout will lower your Evasion score to a total of <em>12.</em>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container sage" id="death-grip">
+                <div class="card-head">
+                    <div class="card-header">Death Grip</div>
+                    <input type="checkbox" class="active-card">
+                </div>                            
+                <div class="card-feature">  
+                    <div class="card-description">
+                        Make a Spellcast Roll against a target within Close range and 
+                        choose one of the following options:<br><br>
+                        -   pull the target into Melee range or pull yourself into Melee range of them.<br>
+                        -   You constrict the target and force them to mark 2 Stress.<br>
+                        -   All adversaries between you and the target must succeed on a Reaction Roll (13) or 
+                        be hit by vines, taking 3d6+2 physical damage.<br><br>
+                        On a success, vines reach out from your hands, causing the chosen effect and 
+                        temporarily Restraining the target.
+                    </div>
+                    <div class="card-buttons">
+                        <button class="duality-roll" id="death-hit">+6</button>
+                        <button class="damage-roll" id="death-dmg">3d6+2</button>
+                        <div>Enemy Restrained</div>
+                        <input type="checkbox" class="active-effect">
+                    </div>
+                </div>
+            </div>
+            <div class="card-container sage" id="conjure-swarm">
+                <div class="card-head">
+                    <div class="card-header">Conjure Swarm</div>
+                    <input type="checkbox" class="active-card">
+                </div>
+                <div class="card-feature">
+                    <div class="card-title"><strong>Tekaira Armored Beetles</strong></div>
+                    <div class="card-description">
+                        <strong>Mark a Stress</strong> to conjure armored beetles that encircle you. When you next take damage, 
+                        reduce the severity by one threshold. You can spend a Hope to keep the beetles conjured after taking damage.
+                    </div>
+                    <div class="card-buttons">
+                        <button>Extend Effect (1 Hope)</button>
+                    </div>
+                </div>
+                <div class="card-feature">
+                    <div class="card-title"><strong>Fire Flies</strong></div>
+                    <div class="card-description">
+                        Make a Spellcast Roll against all adversaries within Close range. 
+                        Spend a Hope to deal 2d8+3 magic damage to targets you succeeded against.
+                    </div>
+                    <div class="card-buttons">
+                        <button class="duality-roll" id="flies-hit">+6</button>
+                        <button class="damage-roll" id-="flies-dmg">2d8+3</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container bone" id="know-thy-enemy">
+                <div class="card-head">
+                    <div class="card-header">Know Thy Enemy</div>
+                    <input type="checkbox" class="active-card">
+                </div>                            
+                <div class="card-feature">
+                    <div class="card-description">
+                        When observing a creature, you can make an Instinct Roll against 
+                        them. On a success, spend a Hope and ask the GM for one set of 
+                        information about the target from the following options:
+                        Their unmarked Hit Points and Stress.<br><br>
+                        -   Their Difficulty and damage thresholds.<br>
+                        -   Their tactics and standard attack damage dice.<br>
+                        -   Their features and Experiences.<br><br>
+                        Additionally on a success, you can mark a Stress to remove a Fear from the GM's Fear Pool.
+                    </div>
+                    <div class="card-buttons">
+                        <button class="duality-roll">+6</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container splendor" id="second-wind">
+                <div class="card-head">
+                    <div class="card-header">Second Wind</div>
+                    <input type="checkbox" class="active-card">
+                </div>
+                <div class="card-feature">
+                    <div class="card-description">Once per rest, when you succeed on an attack against an adversary, you can 
+                        clear 3 Stress or a Hit Point. On a success with Hope, you also clear 3 Stress or a Hit Point on an 
+                        ally within Close range of you.
+                    </div>
+                    <div class="card-buttons">
+                        <div>Per short rest:</div>
+                        <input type="checkbox" class="active-ability">
+                    </div>
+                </div>
+            </div>
+            <div class="card-container splendor" id="shape-material">
+                <div class="card-head">
+                    <div class="card-header">Shape Material</div>
+                    <input type="checkbox" class="active-card">
+                </div>
+                <div class="card-feature">
+                    <div class="card-description">
+                        <strong>Spend a Hope</strong> to shape a section of natural material you're touching (such as stone, ice, or wood) 
+                        to suit your purpose. The area of the material can be no larger than you. For example, you can form a rudimentary 
+                        tool or create a door.<br><br>
+                        You can only affect the material within Close range of where you're touching it.
+                    </div>
+                    <div class="card-buttons">
+                        <div>Per short rest:</div>
+                        <input type="checkbox" class="active-ability">
+                    </div>
+                </div>
+            </div>
+            <div class="card-container codex" id="book-of-yarrow">
+                <div class="card-head">
+                    <div class="card-header">Book of Yarrow</div>
+                    <input type="checkbox" class="active-card">
+                </div>                            
+                <div class="card-feature">
+                    <div class="card-subheader"><strong>Timejammer</strong></div>
+                    <div class="card-description">
+                        Make a Spellcast Roll (18). On a success, time temporarily slows to a halt for everyone within 
+                        Far range except for you.<br><br>
+                        It resumes the next time you make an action roll that targets another creature.
+                    </div>
+                    <div class="card-buttons">
+                        <button class="duality-roll">+6</button>
+                        <div>Time Stopped:</div>
+                        <input type="checkbox" class="active-ability">
+                    </div>
+                    <div class="card-feature">
+                        <div class="card-subheader"><strong>Magic Immunity</strong></div>
+                        <div class="card-description">
+                            <strong>Spend 5 Hope</strong> to become immune to magic damage until your next rest.
+                        </div>
+                        <div class="card-buttons">
+                            <div>Magic Immunity:</div>
+                            <input type="checkbox" class="active-ability">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End of Domain Cards -->
+    </div>
+    <div class="container">
+        <h2 class="title">Features & Effects</h2>
+        <div class="card-collection">
+            <div class="card-container ranger" id="ranger-hope">
+                <div class="card-header">Ranger Hope</div>
+                <div class="card-feature">
+                    <div class="card-subheader">Hold Them Off</div>
+                    <div class="card-description">
+                        <strong>Spend 3 Hope</strong> when you succeed on an attack with a weapon to use that 
+                        same roll against two additional adversaries within range of the attack.
+                    </div>
+                    <div class="card-buttons">
+                        <button class="addHope">3 Hope</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container ranger" id="ranger-feature">
+                <div class="card-header">Ranger Class Features</div>
+                <div class="card-feature">
+                    <div class="card-subheader">Ranger's Focus</div>
+                    <div class="card-description">
+                        <strong>Spend a Hope</strong> and make an attack against a target. 
+                        On a success, deal your attack's normal damage and temporarily make the attack's 
+                        target your Focus.<br><br> 
+                        Until this feature ends or you make a different creature your Focus, you gain the 
+                        following benefits against your Focus:<br><br>
+                        -   You know precisely what direction they are in.<br>
+                        -   When you deal damage to them, they must mark a Stress.<br>
+                        -   When you fail an attack against them, you can end your Ranger's Focus feature to 
+                        reroll your Duality Dice.
+                    </div>
+                </div>
+            </div>
+            <div class="card-container ranger" id="beastbound-feature">
+                <div class="card-header">Beastbound Features</div>
+                <div class="card-feature">
+                    <div class="card-subheader"><strong>Companion</strong></div>
+                    <div class="card-description">
+                        You have an animal companion of your choice (at the GM's discretion). They stay 
+                        by your side unless you tell them otherwise.<br><br>
+                        Take the Ranger Companion sheet. When you level up your character, choose a level-up  
+                        option for your companion from this sheet as well.
+                    </div>
+                    <div class="card-buttons">
+                        <a href="./luna_companion.html">Owlbearto's Stat's Page</a>
+                    </div>
+                </div>
+            </div> 
+            <div class="card-container ranger" id="luna-ancestry">
+                <div class="card-header">Half-Elf Ancestry</div>
+                <div class="card-feature">
+                    <div class="card-subheader"><strong>Adaptability</strong></div>
+                    <div class="card-description">
+                        When you fail a roll that utilized one of your Experiences, you can mark a Stress 
+                        to reroll.
+                    </div>
+                    <div class="card-buttons">
+                        <button>1 Stress</button>
+                    </div>
+                </div>
+                <div class="card-feature">
+                    <div class="card-subheader"><strong>Quick Reactions</strong></div>
+                    <div class="card-description">
+                        Mark a Stress to gain advantage on a reaction roll.
+                    </div>
+                    <div class="card-buttons">
+                        <button>1 Stress</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container ranger" id="luna-community-features">
+                <div class="card-header">Loreborne Community Feature</div>
+                <div class="card-feature">
+                    <div class="card-subheader"><strong>Well-read</strong></div>
+                    <div class="card-description">
+                        You have advantage on rolls that involve the history, culture, or politics 
+                        of a prominent person or place.
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <div class="empty-space"></div> <!-- Spacer element to allow page view with dice roller -->
+</body>
+</html>
