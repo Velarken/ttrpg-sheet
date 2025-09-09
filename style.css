@@ -75,6 +75,59 @@ a:visited {
     justify-content: center;
     height:auto;
 }
+.hidden {
+    display:none;
+}
+.equip-collection {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.equip-container {
+    display:flex;
+    flex-direction: column;
+    width:75vw;
+    align-items: center;
+    justify-content: center;
+    padding:10px;
+    margin:10px;
+    border:5px solid var(--crimson);
+    border-radius: 12px;
+    background-color: #000;
+}
+.equip-head {
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.equip-toHit {
+    display:flex;
+}
+.head-buttons {
+    display:flex;
+    flex-direction:column;
+}
+.equip-features {
+    display:flex;
+}
+.equip-feature {
+    display:flex;
+    flex-direction: column;
+    flex:1;
+}
+.equip-header {
+    text-align: center;
+    font-size:2vw;
+}
+.equip-subheader {
+    text-align: center;
+    font-size: 1.5vw;
+}
+.equip-buttons {
+    display:flex;
+}
+/* Older Selectors - May need to be combined or removed */
 .nav-container {
     display:flex;
     list-style:none;
@@ -234,6 +287,7 @@ a:visited {
     letter-spacing: 0.15rem;
     margin:10px;
 }
+
 /* Card Selectors */
 .card-header {
     text-align: center;
@@ -251,28 +305,8 @@ a:visited {
     text-align: center;
     color:var(--crimson);
     font-weight:700;
+    font-size:1.5vw;
     margin-bottom:5px;
-}
-.black-header {
-    color:black;
-    font-size:5vw;
-    font-weight:600;
-    text-align: center;
-}
-
-.unequipped-card-collection {
-    display:flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.extra-domain-cards {
-    display:flex;
-    flex-direction: column;
-    padding:10px;
-    margin:10px;
-    border-radius: 8px;
-    width:92vw;
 }
 .character-auras {
     display:flex;
@@ -488,11 +522,7 @@ a:visited {
     flex-direction: row;
     padding:10px;
 }
-.equip-container {
-    display:flex;
-    flex-direction: column;
-    width:65vw;
-}
+
 .item {
     display:flex;
     flex-direction: column;

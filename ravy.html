@@ -7,32 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="ravy-bg"> 
-    <!--  -->
-    <div class="nav-container ravy-outer">
+    <div class="nav-container section-header-r">
         <li><a href="jasper.html">Jasper</a></li>
         <li><a href="luna.html">Luna</a></li>
         <li><a href="ravy.html">Ravy</a></li>
     </div>
+    <div class="sub-nav section-header-r">
+        <li><a href="ravy_equip.html">Weapons & Items</a></li>
+        <li><a href="ravy_effects.html">Domain Cards</a></li>
+    </div>
+    <div class="dice-output-container ravy-outer">
+        <div class="title" id="roll-list">Roll History</div>
+        <div class="roll-list">
+            <div class="last-ability-roll">
+                <div class="subtitle"><strong>Your Last Duality Dice Roll</strong></div>
+                <div class="ability-output">No roll yet!</div>
+            </div> 
+            <div class="last-reaction-roll">
+                <div class="subtitle"><strong>Your Last Reaction Roll</strong></div>
+                <div class="reaction-output">No roll yet!</div>
+            </div>
+            <div class="last-damage-roll">
+                <div class="subtitle"><strong>Your Last Damage Roll </strong></div>
+                <div class="damage-output">No roll yet!</div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="character-sheet">
             <div class="character-auras ravy-outer">
-                <div class="dice-output-container">
-                <div class="title" id="roll-list">Roll History</div>
-                <div class="roll-list">
-                    <div class="last-ability-roll">
-                        <div class="subtitle"><strong>Your Last Duality Dice Roll</strong></div>
-                        <div class="ability-output">No roll yet!</div>
-                    </div>
-                    <div class="last-reaction-roll">
-                        <div class="subtitle"><strong>Your Last Reaction Roll</strong></div>
-                        <div class="reaction-output">No roll yet!</div>
-                    </div>
-                    <div class="last-damage-roll">
-                        <div class="subtitle"><strong>Your Last Damage Roll </strong></div>
-                        <div class="damage-output">No roll yet!</div>
-                    </div>
-                </div>
-            </div>
                 <div class="condition-container">
                     <h4>Conditions</h4>
                     <div class="conditions">
@@ -266,6 +269,7 @@
             </div>
         </div>
     </div>
+    <div class="empty-space"></div>
     <script src="jasper_script.js"></script>
 </body>
 </html>

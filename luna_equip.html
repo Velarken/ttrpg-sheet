@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="nav-container section-header-l">
+        <li><a href="jasper.html">Jasper</a></li>
+        <li><a href="luna.html">Luna</a></li>
+        <li><a href="ravy.html">Ravy</a></li>
+    </div>
+    <div class="sub-nav section-header-l">
+        <li><a href="luna_equip.html">Weapons & Items</a></li>
+        <li><a href="luna_effects.html">Domain Cards</a></li>
+    </div>
+    <div class="dice-output-container jasper-outer">
+        <div class="title" id="roll-list">Roll History</div>
+        <div class="roll-list">
+            <div class="last-ability-roll">
+                <div class="subtitle"><strong>Your Last Duality Dice Roll</strong></div>
+                <div class="ability-output">No roll yet!</div>
+            </div> 
+            <div class="last-reaction-roll">
+                <div class="subtitle"><strong>Your Last Reaction Roll</strong></div>
+                <div class="reaction-output">No roll yet!</div>
+            </div>
+            <div class="last-damage-roll">
+                <div class="subtitle"><strong>Your Last Damage Roll </strong></div>
+                <div class="damage-output">No roll yet!</div>
+            </div>
+        </div>
+    </div>
+    <div class="card-container">
+    <div class="card-head">
+        <div class="card-header">Starpiercer</div>
+        <input type="checkbox">
+    </div>
+    <div class="card-feature item-lore">
+        <button class="loreHide" id="hideStarpiercer">x</button> <!-- Minimize lore blurb -->
+        <div class="card-description">
+            Originally created by the goddess Sehanine Moonbow to combat the Titans and the forces of 
+            Tiamat the Dragon Queen, The Star-Piercer Bow is both a holy artifact and powerful weapon. 
+            The bow itself is made of the incredibly rare material known only as “Star Metal” and strung 
+            with magically enhanced Silverweave thread. Star-Piercer was gifted to the Dwarven Hero 
+            Nee'indra Brightbow during the first dragon crisis, and with it she hunted the white dragonflight 
+            to near extinction and helped establish the Dwarvern Kingdom of Rusond.<br><br>
+            Star-Piercer became forever intertwined with the bloodline of Nee'indra Brightbow after being 
+            cursed and shattered by the fae witch Glorsharna, from that day forward, the first born women of 
+            each generation became doomed to find glory but never be recognized or remembered by history or 
+            those around them. Glorsharna kept one piece of the bow and Nee'indra passed the remaining three 
+            pieces on to her children as a reminder of what was lost. Over time however, the legend was forgotten 
+            until Star-Piercer was reassembled a by direct descendant of Nee'indra, Luna Hyguard, breaking the curse.
+        </div>
+    </div>
+    <div class="card-feature item-blessings">
+        <div class="card-subheader">Legacy of the Hyguards</div>
+        <div class="card-description">
+            • Star-Piercer requires no ammo, instead firing arrows of conjured force energy.<br>
+            • You cannot be charmed or frightened, especially by dragons.<br>
+            • You can magically summon or dismiss Star-piercer at will.<br>
+            • Gain a +3 bonus to attack and damage rolls while using this weapon
+        </div>
+    </div>
+    <div class="card-feature item-abilities">
+        <div class="card-header">Weapon Abilities</div>
+        <div class="card-feature">
+            <div class="card-subheader">Lunar Wrath</div>
+            <div class="card-description">
+                Choose an elemental damage type to use for your arrows. <strong>Spend 1 Hope</strong> to add a 
+                second damage type to your next attack.
+            </div>
+            <div class="card-buttons">
+                <button>1 Hope</button>
+            </div>
+        </div>
+        <div class="card-feature">
+            <div class="card-subheader">Dark Side of the Moon</div>
+            <div class="card-description">
+                <strong>Spend 2 Hope</strong> Until end of scene, deal an additional 2d8 per attack. 
+                Additionally, you gain advantage on all attacks made with Starpiercer
+            </div>
+            <div class="card-buttons">
+                <button>2 Hope</button>
+            </div>
+        </div>
+        <div class="card-feature">
+            <div class="card-subheader">Volley of Stars</div>
+            <div class="card-description">
+                <strong>Spend 2 Hope</strong>. Roll to hit up to 5 targets, on a success inflict a Minor wound. 
+                If you choose to target 1 enemy, roll 5 dice. On 3 or more successes, inflict a Severe wound 
+                and make the target <em>Vulnerable</em>.
+            </div>
+            <div class="card-buttons">
+                <button>2 Hope</button>
+            </div>
+        </div>
+        <div class="card-feature">
+            <div class="card-subheader">Burning Starlight</div>
+            <div class="card-description">
+                <strong>Spend 3 Hope</strong> to ensure your next attack is a critical success.
+            </div>
+            <div class="card-buttons">
+                <button>3 Hope</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card-container">
+    <div class="card-head">
+        <div class="card-header">Blue Scale Armor</div>
+        <input type="checkbox">
+    </div>
+    <div class="card-feature item-lore">
+        <button class="loreHide" id="hideBlueScaleArmor">x</button> <!-- Minimize lore blurb -->
+        <div class="card-description">
+            This armor was crafted from the remains of an adult blue dragon plaguing the city of Gin, 
+            the mighty Boujie bunch felled Zarian on the streets of the city. Using the bone and scales 
+            from the dragons corpse the Boujie Bunch commissioned specialty armor from Ishida Armor Works. 
+            Tsuna and Hiromi forged a matching set of armor to protect the wearer from future encounters 
+            with blue dragons.
+        </div>
+    </div>
+    <div class="card-feature item-abilities">
+        <div class="card-subheader">Armor Abilities</div>
+        <div class="card-description">
+            - While wearing this armor, gain +1 Evasion.<br>
+	        - You also have advantage on rolls to maintain your composure in the face of a 	dragon's terror. 
+            Additionally, gain advantage against the breath weapon of dragons.<br>
+	        - Gain resistance to lightning damage
+        </div>
+        <div class="card-subheader">Predator To Prey</div>
+        <div class="card-description">
+            Spend 1 Hope, you are able to magically discern the distance and direction 
+            to the nearest black dragon. You are able to track multiple dragons using this sense, but their exact positions may be less accurate.
+        </div>
+    </div>
+</div>
+<div class="card-container">
+    <div class="card-head">
+        <div class="card-header">Cloak of Swift Flight</div>
+        <input type="checkbox">
+    </div>
+    <div class="card-feature item-lore">
+        <button class="loreHide" id="hideCloakofSwiftFlight">x</button>
+        <div class="card-description">
+            A shimmering, translucent capelet that looks almost too delicate to be worn. Though it looks fragile,
+            this cape is able to allow its user to evade attacks and even fly.
+        </div>
+    </div>
+    <div class="card-feature weapon-abilities">
+        <div class="card-header">Item Abilities</div>
+        <div class="card-feature">
+            <div class="card-subheader">Mach Speed</div>
+            <div class="card-description">
+                <strong>Spend 2 Hope</strong>. You gain +2 to your <em>Evasion</em> score until the end of the scene.
+            </div>
+            <div class="card-buttons">
+                <button>2 Hope</button>
+            </div>
+        </div>
+        <div class="card-feature">
+            <div class="card-subheader">Above It All</div>
+            <div class="card-description">
+                <strong>Once per rest</strong>, take flight. You are able to use any of your domain cards or equipment 
+                while flying.<br><br>
+                While flying, if shooting with Starpiercer, spend 1 Hope to add 2d8 to your next arrow.
+            </div>
+            <div class="card-buttons">
+                <button>1 Hope</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card-container">
+    <div class="card-head">
+        <div class="card-header">Gauntlets of Ogre Power</div>
+        <input type="checkbox">
+    </div>
+    <!-- <div class="card-feature item-lore">
+        <button class="loreHide">x</button>
+        <div class="card-description">
+        </div>
+    </div> -->
+    <div class="card-feature item-abilities">
+        <div class="card-feature">
+            <div class="card-description">
+                While wearing these gauntlets, your Strength score is 4.
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="jasper_script.js"></script>
+</body>
+</html>

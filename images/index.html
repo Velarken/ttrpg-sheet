@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css
+    ">
+</head>
+<body>
+    <div class="equip-collection">
+        <div class="equip-container">
+            <div class="equip-head">
+                <div class="equip-name"><h4>Zsosa's Timepiece</h4></div>
+                <div class="equip-toHit">
+                    <div class="head-buttons">
+                        <h6>Roll to Hit</h6>
+                        <button class="duality-roll" id="zsosas-hit">+5</button>
+                    </div>
+                    <div class="head-buttons">
+                        <h6>Roll Damage</h6>
+                        <button class="damage-roll" id="zsosas-dmg">4d10+9</button>
+                    </div>
+                </div>
+            </div>
+            <div class="equip-features">
+                <div class="equip-feature">
+                    <div class="equip-subheader">Momentary Stasis</div>
+                    <div class="equip-description">
+                        <strong>Mark 1 Stress</strong> to make a spellcasting role against a creature, the targeted
+                        creature must make an Instinct roll. If the Instinct roll is lower than 
+                        the caster's spellcasting roll, the targeted creature is <em>Immobilized</em> 
+                        until the creature's spotlight returns or the GM spends a <strong>Fear</strong> to remove it.
+                    </div>
+                    <div class="equip-buttons">
+                        <button class="duality-roll" id="stasis-hit">+5</button>
+                    </div>
+                </div>
+                <div class="equip-feature">
+                    <div class="equip-subheader">Temporal Awareness</div>
+                    <div class="equip-description">
+                        <strong>Spend 1 Hope</strong>, start your spotlight phase immediately. If another
+                        player is currently in the spotlight, describe how you work with them to take your turn.
+                    </div>
+                </div>
+                <div class="equip-feature">
+                    <div class="equip-subheader">Flicker In Time</div>
+                    <div class="equip-description">
+                        <strong>Spend 2 Hope</strong> to immediately clear 1 stress from or give 1 Hope to up to 5 allies.
+                    </div>
+                </div>
+            </div>
+            <div class="equip-details">
+                <div class="equip-feature">
+                    A polished brass pocket watch embellished with intricate line work depicting an overlapping sun and crescent 
+                    moon. Hidden amongst the design are the initials of its creator “ACZ.” Inside, the clock face is in common 
+                    numerals listed clockwise, one through twelve, there is also a secondary small face that seems to track the 
+                    phases of the moon. Zsosa's Timepiece has three different phases of operation that correspond to its user's 
+                    power level, as well as their understanding of chronomancy and the timepiece itself. You instinctively 
+                    always know exactly what time it is.<br><br>
+
+                    Occasionally, the ticking of the inner mechanisms of the timepiece drown out all other sounds in your mind 
+                    for a short time, even while deafened. 
+                </div>
+                <div class="equip-feature">
+                    <div class="equip-subheader">Distort Time:</div> 
+                    <div class="equip-description">
+                        You can create a 15-foot-radius sphere of temporal distortion, centered on 	yourself, that allows you and any 
+                        friendly creature that enters the space to peer into the past and 	comb through the events of that space, up to 
+                        24 hours ago.<br><br>This effect lasts 10 minutes, or until dismissed.
+	                </div>
+                    <div class="equip-subheader">Timeless Body:</div>
+                    <div class="equip-description">
+                        Once fully empowered, for every 10 years that pass your body only ages 1 year. This effect ends if you no longer 
+                        control the pocket watch.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="equip-container">
+            <div class="equip-head">
+                <div  class="equip-name"><h4>Staff of Relentless Storms</h4></div>
+                <div class="equip-toHit">
+                    <div class="head-buttons">
+                        <h6>Roll to Hit</h6>
+                        <button class="duality-roll" id="SOS-hit">+5</button>
+                    </div>
+                    <div class="head-buttons">
+                        <h6>Roll Damage</h6>
+                        <button class="damage-roll" id="SOS-dmg">4d10+9</button>
+                    </div>
+                </div>
+            </div>
+            <div class="equip-features">
+                <div class="equip-feature">
+                    <div class="equip-subheader">Thunderstrike</div>
+                    <div class="equip-description">
+                        <strong>Once per short rest</strong>, slam the staff against the ground to create a 
+                        deafening shock wave emanating from you. All adversaries must make an Instinct roll 
+                        of 18 or are <em>Vulnerable</em> until you take your next turn or the GM spends 1 
+                        Fear to end the effect early.
+                    </div>
+                    <div class="equip-buttons">
+                        <div>Per short rest</div>
+                        <input type="checkbox" class="ability-active">
+                    </div>
+                </div>
+                <div class="equip-feature">
+                    <div class="equip-subheader">Call Lightning</div>
+                    <div class="equip-description">
+                        <strong>Spend 1 Hope</strong>. Conjure a beam of lightning in the direction you are 
+                        facing that reaches Very Far range. Any adversary within this area must succeed an 
+                        Agility roll of 18 or take 5d6 lightning damage.
+                    </div>
+                    <div class="equip-buttons">
+                        <button class="damage-roll" id="lightning-dmg">5d6+0</button>
+                    </div>
+                </div>
+                <div class="equip-feature">
+                    <div class="equip-subheader">Unending Torrent</div>
+                    <div class="equip-description">
+                        <strong>Spend 1 Hope</strong> to summon a powerful stream of water directed towards an 
+                        enemy or enemies of your choosing in a line. Adversaries must make a Strength roll of 
+                        16 or be pushed into the next furthest range from you. This effect can also be used to 
+                        affect the environment around you, including putting out non-magical fires.
+                        <br><br>Crackling Infusion: <strong>Spend 1 Hope</strong> to add 2d6 to your next damage roll.
+                    </div>
+                    <div class="equip-buttons">
+                        <button>1 Hope</button>
+                        <button class="damage-roll" id="torrent-dmg">2d6+0</button>
+                    </div>  
+                </div>
+            </div>
+            <div class="equip-details">
+                <div class="equip-description">
+                    A gnarled wooden staff that seems to pulse down the weapon with a blue, crackling energy that 
+                    disperses into the ground. Though it doesn't have a connection to the blue dragonflight, it's similarity
+                    to the trident used to control Elliyah does not go unnoticed.
+                </div>
+            </div>
+        </div>
+        <div class="equip-container">
+            <div class="equip-head">
+                <div class="equip-name"><h4>Diadem of Brilliance</h4></div>
+            </div>
+            <div class="equip-features">
+                <div class="equip-feature">
+                    <div class="equip-subheader">Untouched by Flame</div>
+                    <div class="equip-description">
+                        <strong>Spend 2 Hope</strong>, become immune to fire damage until the end of the
+                        scene. Removing the diadem also removes this effect.
+                    </div>
+                </div>
+                <div class="equip-feature">
+                    <div class="equip-subheader">Dazzling Light</div>
+                    <div class="equip-description">
+                        <strong>Spend 1 Hope</strong>, create a sphere of light that reaches to Far range until the end
+                        of scene. While within this dome of light, you are unaffected by magical darkness.
+                    </div>
+                </div>
+                <div class="equip-feature">
+                    <div class="equip-subheader">Starfall</div>
+                    <div class="equip-description">
+                        Conjure spectral daggers made of starlight that circle your head. <strong>Spend 1 Hope</strong> to
+                        deal 6d10+8 damage to a creature within Far range.
+                    </div>
+                    <div class="equip-buttons">
+                        <button class="damage-roll" id="starfall-dmg">4d10+4</button>
+                    </div>
+                </div>
+                <div class="equip-feature">
+                    <div class="equip-subheader">Forceful Hold</div>
+                    <div class="equip-description">
+                        <strong>Spend 2 Hope</strong>, create a force field around a creature that you can see until your
+                        next spotlight, or until the GM spends 1 Fear to dispel the effect.
+                    </div>
+                </div>
+            </div>
+            <div class="equip-details">
+                <div class="equip-feature">
+                    <div class="equip-description">
+                        Originally forged by the Order of the Orachalcum for Jasper. This diadem was meant to keep Jasper 
+                        satiated and safe while working amongst the Brass dragonflight. As Jasper aged, the diadem's purpose 
+                        expanded to fit his new role as “The Golden Child”. Infused directly with the magic of the Brass' 
+                        breath, the once humble object of defense became Jasper's bag of tricks to turn the tide of any fight 
+                        they faced.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="equip-container">
+            <div class="equip-head">
+                <div class="equip-name"><h4>Dragon Scale Armor</h4></div>
+            </div>
+            <div class="equip-features">
+                <div class="equip-feature">
+                    <div class="equip-subheader">Predator to Prey</div>
+                    <div class="equip-description">
+                        <strong>Spend 1 Hope</strong>, you are able to magically discern the distance
+                        and direction to the nearest blue dragon. You are able to multiple dragons 
+                        using this sense, but their exact positions may be less accurate.
+                    </div>
+                </div>
+            
+            </div>
+            <div class="equip-details">
+                <div class="equip-feature">
+                    <div class="equip-description">
+                        Originally forged by the Order of the Orachalcum for Jasper. This diadem was meant to keep Jasper 
+                        satiated and safe while working amongst the Brass dragonflight. As Jasper aged, the diadem's purpose 
+                        expanded to fit his new role as “The Golden Child”. Infused directly with the magic of the Brass' 
+                        breath, the once humble object of defense became Jasper's bag of tricks to turn the tide of any fight 
+                        they faced.
+                    </div>
+                </div>
+                <div class="equip-feature">
+                    <div class="equip-subheader">Blessings of Scale</div>
+                    <div class="equip-description">
+                        - While wearing this armor, gain +1 Evasion.<br><br>
+                        - You also have advantage on rolls to maintain your composure in the face of a dragon's terror.<br>
+                        Additionally, gain advantage against the breath weapon of dragons.<br><br>
+                        - Gain resistance to lightning damage
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

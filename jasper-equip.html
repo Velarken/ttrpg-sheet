@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="jasper-bg ">
-        <div class="nav-container section-header-j">
+    <div class="nav-container section-header-j">
         <li><a href="jasper.html">Jasper</a></li>
         <li><a href="luna.html">Luna</a></li>
         <li><a href="ravy.html">Ravy</a></li>
@@ -34,41 +34,82 @@
         </div>
     </div>
     <div class="container">
-        <div class="equip-container">
-            <div class="card-container zsosas" id="zsosas-timepiece">
-                <div class="card-header">Zsosa's Timepiece</div>
-                <div class="card-buttons">
-                    <div class="flex-column">
-                        <div>Roll to hit</div>
-                        <button class="duality-roll" id="zsosas-hit">+5</button>
-                    </div>
-                    <div class="flex-column">
-                        <div>Roll Damage</div>
-                        <button class="damage-roll" id="zsosas-dmg">4d10+9</button>
+        <div class="equip-collection">
+            <div class="equip-container">
+                <div class="equip-head">
+                    <div class="equip-name"><h4></h4></div>
+                    <div class="equip-toHit">
+                        <div class="head-buttons">
+                            <h6>Roll to Hit</h6>
+                            <button class="duality-roll" id="-hit">+5</button>
+                        </div>
+                        <div class="head-buttons">
+                            <h6>Roll Damage</h6>
+                            <button class="damage-roll" id="-dmg">4d10+9</button>
+                        </div>
                     </div>
                 </div>
-                <div class="zsosas-effects">
-                    <div class="card-midheader">Zsosa's Timepiece Abilities</div>
-                    <div class="card-feature">
-                        <div class="card-subheader">Momentary Stasis</div>
-                        <div class="card-description">
-                            <strong>Spend 2 Hope</strong> Make a spellcasting role against a creature, the targeted
+                <div class="equip-features">
+                    <div class="equip-feature">
+
+                    </div>
+                    <div class="equip-feature">
+
+                    </div>
+                    <div class="equip-feature">
+
+                    </div>
+                    <div class="equip-feature">
+
+                    </div>
+                </div>
+                <div class="equip-details">
+                    <div class="equip-lore">
+
+                    </div>
+                    <div class="equip-boons">
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="equip-container" id="zsosas-timepiece">
+                <div class="equip-head">
+                    <div class="equip-header">Zsosa's Timepiece</div>
+                    <div class="equip-buttons">
+                        <div class="flex-column">
+                            <div>Roll to hit</div>
+                            <button class="duality-roll" id="zsosas-hit">+5</button>
+                        </div>
+                        <div class="flex-column">
+                            <div>Roll Damage</div>
+                            <button class="damage-roll" id="zsosas-dmg">4d10+9</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="equip-subheader">Zsosa's Timepiece Abilities</div>
+                <div class="equip-features zsosas">
+                    <div class="equip-feature">
+                        <div class="equip-subheader">Momentary Stasis</div>
+                        <div class="equip-description">
+                            <strong>Mark 1 Stress</strong> to make a spellcasting role against a creature, the targeted
                             creature must make an Instinct roll. If the Instinct roll is lower than 
                             the caster's spellcasting roll, the targeted creature is <em>Immobilized</em> 
                             until the creature's spotlight returns or the GM spends a <strong>Fear</strong> to remove it.
                         </div>
-                        <div class="card-buttons">
+                        <div class="equip-buttons">
                             <button class="duality-roll" id="stasis-hit">+5</button>
                         </div>
                     </div>
-                    <div class="card-feature">
+                    <div class="equip-feature">
                         <div class="card-subheader">Temporal Awareness</div>
                         <div class="card-description">
                             <strong>Spend 1 Hope</strong>, start your spotlight phase immediately. If another
                             player is currently in the spotlight, describe how you work with them to take your turn.
                         </div>
                     </div>
-                    <div class="card-feature">
+                    <div class="equip-feature">
                         <div class="card-subheader">Flicker In Time</div>
                         <div class="card-description">
                             <strong>Spend 2 Hope</strong> to immediately clear 1 stress from or give 1 Hope to up to 5 allies.
@@ -96,17 +137,18 @@
                 </div>
             </div>
             <div class="card-container storm-staff" id="staff-of-storms">
-                <div class="card-header">Staff of the Relentless Storm</div>
-                <div class="card-buttons">
-                    <div class="flex-column">
-                        <div>Roll to Hit:</div>
-                        <button class="duality-roll" id="range-attack-hit">+5</button>
+                <div class="equip-head">
+                    <div class="card-header">Staff of the Relentless Storm</div>
+                    <div class="card-buttons">
+                        <div class="flex-column">
+                            <div>Roll to Hit:</div>
+                            <button class="duality-roll" id="range-attack-hit">+5</button>
+                        </div>
+                        <div class="flex-column">
+                            <div>Roll Damage:</div>
+                            <button class="damage-roll" id="range-attack-dmg">4d8+5</button>
+                        </div>
                     </div>
-                    <div class="flex-column">
-                        <div>Roll Damage:</div>
-                        <button class="damage-roll" id="range-attack-dmg">4d8+5</button>
-                    </div>
-
                 </div>
                 <div class="card-feature">
                     <div class="card-subheader">Thunderstrike</div>

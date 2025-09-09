@@ -38,6 +38,7 @@ const reactionButtons = document.querySelectorAll('.reaction-roll');
 const damageRoll = document.querySelector('.damage-output');
 const abilityRoll = document.querySelector('.ability-output');
 const reactionRoll = document.querySelector('.reaction-output');
+const loreHide = document.querySelectorAll('.loreHide')
 
 //  Event Listeners for all buttons, targetting the individual one pressed
 for (button of damageButtons) {
@@ -50,7 +51,15 @@ for (button of dualityButtons) {
 for (button of reactionButtons) {
     button.addEventListener('click', (clicked) => targetButton2(clicked));
 }
+for (button of loreHide) {
+    button.addEventListener('click', (clicked) => hideLoreBlurb(clicked))
+}
 
+function hideLoreBlurb(clicked) {
+    let targeted = document.getElementById(clicked.target.id);
+    let parent = targeted.closest('.item-lore')
+    parent.classList.add('hidden')
+}
 function rollDice(diceInput) { // diceInput = content of dice button press
     console.log(diceInput)
     const amountOfDice = Number(diceInput[0]);
@@ -126,15 +135,8 @@ function getRollInfo(diceInput) {
 }
 
 function targetButton(clicked) {
-    console.log('clicked!')
-    let clickedID= clicked.target.id;
-    let targeted = document.getElementById(clickedID)
-    
-    // if (targeted.className)
-
-    console.log(targeted)
+    let targeted = document.getElementById(clicked.target.id)
     getRollInfo(targeted.textContent)
-
 }
 
 function targetButton2(clicked) {
