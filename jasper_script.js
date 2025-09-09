@@ -57,8 +57,12 @@ for (button of loreHide) {
 
 function hideLoreBlurb(clicked) {
     let targeted = document.getElementById(clicked.target.id);
-    let parent = targeted.closest('.item-lore')
-    parent.classList.add('hidden')
+    let parent = targeted.closest('.equip-details')
+    console.log(parent)
+    let children = parent.querySelector('.equip-lore')
+    console.log(children)
+    children.classList.add('hidden')
+    /* Add a show class and apply it to the button to expand lore section */
 }
 function rollDice(diceInput) { // diceInput = content of dice button press
     console.log(diceInput)

@@ -78,7 +78,8 @@ a:visited {
 .hidden {
     display:none;
 }
-.equip-collection {
+/* Weapon and Items */
+body {
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -90,11 +91,80 @@ a:visited {
     width:75vw;
     align-items: center;
     justify-content: center;
+}
+.equip-head {
+    display:flex;
+    width:100%;
+    align-items: baseline;
+    justify-content: center;
+    border:1px solid black;
+}
+.equip-name {
+    display:flex;
+    flex-wrap: wrap;
+    font-size:3.5vw;
+    width:50%;
+    align-items: baseline;
+    text-align: center;
+}
+.equip-toHit {
+    display:flex;
+    flex:1;
+}
+.head-buttons {
+    display:flex;
+    flex:1;
+    justify-content: space-evenly;
+}
+.equip-features {
+    display:flex;
+    width:100%;
+    border:2px solid black;
+    border-radius: 2px;
+    background-color: var(--background-opacity)
+}
+.equip-feature {
+    display:flex;
+    flex-direction: column;
+    flex:1;
+    margin:1vw;
+}
+.equip-subheader {
+    font-size:1.5vw;
+    font-weight:550;
+    text-align: center;
+    margin:0.5vw;
+}
+.equip-description {
+    font-size: 14px;
+    text-align: center;
+}
+.equip-details {
+    display:flex;
+    width:75%;
+    border:2px solid black;
+    border-radius: 3px;
+    align-items: flex-start;
+    height:auto;
+}
+.equip-collection {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.equip-container {
+    display:flex;
+    flex-direction: column;
+    width:85vw;
+    align-items: center;
+    justify-content: center;
     padding:10px;
     margin:10px;
     border:5px solid var(--crimson);
     border-radius: 12px;
-    background-color: #000;
+    background-color: #ffffffc9;
+    margin:4vw;
 }
 .equip-head {
     display:flex;
@@ -115,6 +185,19 @@ a:visited {
     display:flex;
     flex-direction: column;
     flex:1;
+    background-color:var(--gold);
+    border-radius: 2vw;
+    margin:1vw;
+    padding:1vw;
+}
+.equip-lore {
+    display:flex;
+    flex-direction: column;
+    flex:1;
+    background-color:var(--gold);
+    border-radius: 2vw;
+    margin:1vw;
+    padding:1vw;
 }
 .equip-header {
     text-align: center;
@@ -281,7 +364,7 @@ a:visited {
     box-shadow: 0 0 0 3px var(--gold), 0 0 0 5px white;
     border:3px solid var(--gold);
     border-radius: 12px;
-    color:var(--gold);
+    color:black;
     text-align: center;
     text-shadow:-1px -1px 0 #ffffff, 1px -1px 0 #7c7c7c, -1px 1px 0 #000000, 1px 1px 0 #000000;
     letter-spacing: 0.15rem;
